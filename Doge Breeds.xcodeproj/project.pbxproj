@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		357DCE4920617F23003C06AA /* sexydoge.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 357DCE4820617F23003C06AA /* sexydoge.jpg */; };
 		757A1C942060B61B006E6FCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757A1C932060B61B006E6FCC /* AppDelegate.swift */; };
 		757A1C962060B61B006E6FCC /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757A1C952060B61B006E6FCC /* FirstViewController.swift */; };
 		757A1C982060B61B006E6FCC /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757A1C972060B61B006E6FCC /* SecondViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		357DCE4820617F23003C06AA /* sexydoge.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sexydoge.jpg; sourceTree = "<group>"; };
 		757A1C902060B61B006E6FCC /* Doge Breeds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Doge Breeds.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		757A1C932060B61B006E6FCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		757A1C952060B61B006E6FCC /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -37,6 +39,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		357DCE4720617EF2003C06AA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				357DCE4820617F23003C06AA /* sexydoge.jpg */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		757A1C872060B61B006E6FCC = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +66,7 @@
 		757A1C922060B61B006E6FCC /* Doge Breeds */ = {
 			isa = PBXGroup;
 			children = (
+				357DCE4720617EF2003C06AA /* Resources */,
 				757A1C932060B61B006E6FCC /* AppDelegate.swift */,
 				757A1C952060B61B006E6FCC /* FirstViewController.swift */,
 				757A1C972060B61B006E6FCC /* SecondViewController.swift */,
@@ -129,6 +140,7 @@
 				757A1CA02060B61B006E6FCC /* LaunchScreen.storyboard in Resources */,
 				757A1C9D2060B61B006E6FCC /* Assets.xcassets in Resources */,
 				757A1C9B2060B61B006E6FCC /* Main.storyboard in Resources */,
+				357DCE4920617F23003C06AA /* sexydoge.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
