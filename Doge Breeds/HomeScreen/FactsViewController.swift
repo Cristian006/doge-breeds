@@ -12,20 +12,20 @@ class FactsViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     var dogFacts: [DogFact]! = [DogFact]()
-    var cellScaling: CGFloat = 0.8
+    var cellScaling: CGFloat = 0.9
     
     override func viewDidLoad() {
         super.viewDidLoad()
         DogFact.fetchFacts(callback: self.recivedDogFacts)
         
-        let screenSize = UIScreen.main.bounds.size
-        let cellWidth = floor(screenSize.width * cellScaling)
-        let cellHeight = floor(screenSize.height * cellScaling)
-        
         //let insetX = (view.bounds.width - cellWidth) / 2.0
         //let insetY = (view.bounds.height - cellHeight) / 2.0
         
         let layout = collectionView!.collectionViewLayout as! UICollectionViewFlowLayout
+        
+        let screenSize = UIScreen.main.bounds.size
+        let cellWidth = floor(screenSize.width * cellScaling)
+        let cellHeight = layout.itemSize.height // floor(screenSize.height * cellScaling)
         
         layout.itemSize = CGSize(width: cellWidth, height: cellHeight)
         /*
