@@ -12,7 +12,7 @@ class FactsViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     var dogFacts: [DogFact]! = [DogFact]()
-    var cellScaling: CGFloat = 0.2
+    var cellScaling: CGFloat = 0.8
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,15 +22,15 @@ class FactsViewController: UIViewController {
         let cellWidth = floor(screenSize.width * cellScaling)
         let cellHeight = floor(screenSize.height * cellScaling)
         
-        let insetX = (view.bounds.width - cellWidth) / 2.0
-        let insetY = (view.bounds.height - cellHeight) / 2.0
+        //let insetX = (view.bounds.width - cellWidth) / 2.0
+        //let insetY = (view.bounds.height - cellHeight) / 2.0
         
         let layout = collectionView!.collectionViewLayout as! UICollectionViewFlowLayout
         
         layout.itemSize = CGSize(width: cellWidth, height: cellHeight)
-        
+        /*
         collectionView?.contentInset = UIEdgeInsets(top: insetY, left: insetX, bottom: insetY, right: insetX)
-        
+        */
         collectionView?.dataSource = self
     }
     
@@ -45,7 +45,6 @@ class FactsViewController: UIViewController {
             ))
             collectionView!.reloadData()
         }
-        print("WFT")
         print(collectionView.reloadItems(at: [IndexPath(index: 0)]))
         print(collectionView.numberOfItems(inSection: 0))
     }
