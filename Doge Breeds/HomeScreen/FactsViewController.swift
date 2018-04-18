@@ -23,19 +23,17 @@ class FactsViewController: UIViewController {
         
         let layout = collectionView!.collectionViewLayout as! UICollectionViewFlowLayout
         
+        
         let screenSize = UIScreen.main.bounds.size
         let cellWidth = floor(screenSize.width * cellScaling)
         let cellHeight = layout.itemSize.height // floor(screenSize.height * cellScaling)
         
         layout.itemSize = CGSize(width: cellWidth, height: cellHeight)
-        /*
-        collectionView?.contentInset = UIEdgeInsets(top: insetY, left: insetX, bottom: insetY, right: insetX)
-        */
+        
         collectionView?.dataSource = self
     }
     
     func recivedDogFacts(f: [String]) -> Void {
-        print(f)
         for fa in f {
             dogFacts.append(DogFact(
                 title: "Fun Fact",
@@ -45,8 +43,6 @@ class FactsViewController: UIViewController {
             ))
             collectionView!.reloadData()
         }
-        print(collectionView.reloadItems(at: [IndexPath(index: 0)]))
-        print(collectionView.numberOfItems(inSection: 0))
     }
 }
 
@@ -57,20 +53,32 @@ extension FactsViewController : UICollectionViewDataSource
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        /*if dogFacts != nil && !dogFacts.isEmpty {
+        /*
+        if dogFacts != nil && !dogFacts.isEmpty {
             return (dogFacts.count)
-        }*/
-        print(dogFacts.count)
+        }
+        */
+        // print(dogFacts.count)
         return dogFacts.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
-        print(indexPath.item)
+        // print(indexPath.item)
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FactCell", for: indexPath) as! FactCollectionViewCell
         
         cell.setFact(df: dogFacts[indexPath.item])
         
         return cell
+    }
+}
+
+extension FactsViewController : UIScrollViewDelegate {
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        let layout = self.collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        let cellWidthIncludingSpacing = layout.itemSize.width + layout.minimumLineSpacing
+        
+        var offset = targetContentOffset.pointee
+        
     }
 }

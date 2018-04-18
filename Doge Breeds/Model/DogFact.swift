@@ -1,11 +1,3 @@
-//
-//  DogFact.swift
-//  Doge Breeds
-//
-//  Created by Cristian Ponce on 4/4/18.
-//  Copyright © 2018 Cristian Ponce. All rights reserved.
-//
-
 import UIKit
 
 class DogFact
@@ -34,8 +26,8 @@ class DogFact
                 if let urlContent = data {
                     do {
                         let jsonResult = try JSONSerialization.jsonObject(with: urlContent, options: JSONSerialization.ReadingOptions.mutableContainers) as AnyObject
-                        print(jsonResult)
-                        print((jsonResult["facts"] as! [String]).count)
+                        // print(jsonResult)
+                        // print((jsonResult["facts"] as! [String]).count)
                         if let dogFact = jsonResult["facts"] {
                             DispatchQueue.main.async {
                                 callback((dogFact as! [String]))
