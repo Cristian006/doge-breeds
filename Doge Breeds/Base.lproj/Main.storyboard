@@ -46,7 +46,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="300" height="180"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </view>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Fun Fact" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="KQZ-1w-vlD">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Fun Fact" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="KQZ-1w-vlD">
                                                     <rect key="frame" x="20" y="20" width="260" height="24"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
@@ -56,7 +56,7 @@
                                                     <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dog Fact" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5M-7J-77L" userLabel="Fact">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dog Fact" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A5M-7J-77L" userLabel="Fact">
                                                     <rect key="frame" x="20" y="60" width="260" height="100"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="100" id="WbJ-vj-Xxz"/>
@@ -98,19 +98,82 @@
                                 <rect key="frame" x="0.0" y="228" width="375" height="390"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="200" id="BhV-Xh-E8k">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="200"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="300" id="BhV-Xh-E8k">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="300"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BhV-Xh-E8k" id="as7-7a-JRd">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="199.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="299.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jkc-Xx-hcS">
-                                                    <rect key="frame" x="0.0" y="11" width="375" height="189"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jkc-Xx-hcS">
+                                                    <rect key="frame" x="60" y="0.0" width="255" height="300"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="corgi" translatesAutoresizingMaskIntoConstraints="NO" id="yJ8-o6-qte">
+                                                            <rect key="frame" x="0.0" y="0.0" width="255" height="300"/>
+                                                        </imageView>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kxa-FD-Ud5">
+                                                            <rect key="frame" x="0.0" y="0.0" width="255" height="300"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yorkshire Terrier" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Osw-sQ-m6M">
+                                                                    <rect key="frame" x="8" y="8" width="239" height="30"/>
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                                    <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="SN2-qL-hyo">
+                                                                    <rect key="frame" x="8" y="190.5" width="239" height="101.5"/>
+                                                                    <string key="text">Miners in Yorkshire, England, developed the Yorkshire Terrier by crossing the Black-and Tan Terrier with Paisley and Clydesdale Terriers. The goal was to produce a ratting terrier that was small enough to fit in a pocket.</string>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Great Britain (1800s)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="cBb-xN-vkI">
+                                                                    <rect key="frame" x="8" y="46" width="239" height="20"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                                    <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstItem="Osw-sQ-m6M" firstAttribute="top" secondItem="Kxa-FD-Ud5" secondAttribute="top" constant="8" id="20f-iz-Qv3"/>
+                                                                <constraint firstItem="Osw-sQ-m6M" firstAttribute="leading" secondItem="Kxa-FD-Ud5" secondAttribute="leading" constant="8" id="3t7-1R-x5N"/>
+                                                                <constraint firstAttribute="trailing" secondItem="SN2-qL-hyo" secondAttribute="trailing" constant="8" id="63J-Y3-jf4"/>
+                                                                <constraint firstItem="SN2-qL-hyo" firstAttribute="leading" secondItem="Kxa-FD-Ud5" secondAttribute="leading" constant="8" id="9DF-qh-sqj"/>
+                                                                <constraint firstAttribute="trailing" secondItem="Osw-sQ-m6M" secondAttribute="trailing" constant="8" id="Adi-fE-cCu"/>
+                                                                <constraint firstAttribute="bottom" secondItem="SN2-qL-hyo" secondAttribute="bottom" constant="8" id="SDD-Dp-ruF"/>
+                                                                <constraint firstItem="cBb-xN-vkI" firstAttribute="leading" secondItem="Kxa-FD-Ud5" secondAttribute="leading" constant="8" id="Ts0-s0-u5r"/>
+                                                                <constraint firstAttribute="trailing" secondItem="cBb-xN-vkI" secondAttribute="trailing" constant="8" id="aK0-fm-r88"/>
+                                                                <constraint firstItem="cBb-xN-vkI" firstAttribute="top" secondItem="Osw-sQ-m6M" secondAttribute="bottom" constant="8" id="crm-Jk-JIK"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottomMargin" secondItem="Kxa-FD-Ud5" secondAttribute="bottom" constant="-8" id="AQj-3Q-dPR"/>
+                                                        <constraint firstAttribute="bottom" secondItem="yJ8-o6-qte" secondAttribute="bottom" id="NFr-vw-zdh"/>
+                                                        <constraint firstItem="yJ8-o6-qte" firstAttribute="leading" secondItem="jkc-Xx-hcS" secondAttribute="leading" id="OJf-hr-uXY"/>
+                                                        <constraint firstAttribute="trailingMargin" secondItem="Kxa-FD-Ud5" secondAttribute="trailing" constant="-8" id="QOa-3i-YqW"/>
+                                                        <constraint firstItem="Kxa-FD-Ud5" firstAttribute="top" secondItem="jkc-Xx-hcS" secondAttribute="topMargin" constant="-8" id="RCo-GV-lqd"/>
+                                                        <constraint firstItem="Kxa-FD-Ud5" firstAttribute="leading" secondItem="jkc-Xx-hcS" secondAttribute="leadingMargin" constant="-8" id="XWA-hx-ZhP"/>
+                                                        <constraint firstAttribute="trailing" secondItem="yJ8-o6-qte" secondAttribute="trailing" id="apT-Sh-yG7"/>
+                                                        <constraint firstItem="yJ8-o6-qte" firstAttribute="top" secondItem="jkc-Xx-hcS" secondAttribute="top" id="hyF-KU-XLT"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <integer key="value" value="8"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                 </view>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="jkc-Xx-hcS" secondAttribute="trailing" constant="60" id="0tB-QB-ANW"/>
+                                                <constraint firstItem="jkc-Xx-hcS" firstAttribute="top" secondItem="as7-7a-JRd" secondAttribute="top" id="SMz-JS-ZX8"/>
+                                                <constraint firstAttribute="bottom" secondItem="jkc-Xx-hcS" secondAttribute="bottom" id="b43-6X-BRF"/>
+                                                <constraint firstAttribute="bottom" secondItem="jkc-Xx-hcS" secondAttribute="bottom" id="eO0-yf-ajy"/>
+                                                <constraint firstItem="jkc-Xx-hcS" firstAttribute="leading" secondItem="as7-7a-JRd" secondAttribute="leading" constant="60" id="hAL-X4-tdy"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="jkc-Xx-hcS" secondAttribute="bottom" constant="-11" id="ppU-8c-OYO"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
