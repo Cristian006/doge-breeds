@@ -44,5 +44,15 @@ class FactCollectionViewCell: UICollectionViewCell
         self.layer.shadowRadius = 5
         self.layer.shadowOpacity = 0.3
         self.layer.masksToBounds = false
+        
+        self.factTitle.layer.shadowRadius = 1.5
+        self.factTitle.layer.shadowOpacity = 0.3
+        self.factTitle.layer.shadowOffset = CGSize(width: 0, height: 0)
+        self.factTitle.layer.masksToBounds = false
+        
+        self.factLabel.layer.shadowRadius = 1.5
+        self.factLabel.layer.shadowOpacity = 0.3
+        self.factLabel.layer.shadowOffset = CGSize(width: 0, height: 0)
+        self.factLabel.layer.masksToBounds = false
     }
 }
