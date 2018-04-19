@@ -16,7 +16,8 @@ class FactsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        DogFact.fetchFacts(callback: self.recivedDogFacts)
+        DogFact.dogFetchOperations(singleCallback: self.recivedDogFact)
+        //DogFact.fetchFacts(callback: self.recivedDogFacts)
         
         let layout = collectionView!.collectionViewLayout as! UICollectionViewFlowLayout
         
@@ -36,16 +37,21 @@ class FactsViewController: UIViewController {
         collectionView?.delegate = self
     }
     
-    func recivedDogFacts(f: [String]) -> Void {
-        for fa in f {
-            dogFacts.append(DogFact(
-                title: "Doggie Fact",
-                fact: fa,
-                featuredImage: UIImage(named: "corgi")!,
-                color: UIColor(red: 63/255.0, green: 71/255.0, blue: 80/255.0, alpha: 0.8)
-            ))
-        }
+    func recivedDogFacts(_ facts: [DogFact]) -> Void {
+        dogFacts = facts
         collectionView!.reloadData()
+    }
+    
+    func recivedDogFact(_ fact: DogFact) -> Void {
+        dogFacts.append(fact)
+        let indexPath = IndexPath(
+            item: self.dogFacts.count - 1,
+            section: 0
+        )
+        
+        collectionView?.performBatchUpdates({
+            self.collectionView?.insertItems(at: [indexPath])
+        }, completion: nil)
     }
 }
 
