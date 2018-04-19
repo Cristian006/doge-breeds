@@ -21,16 +21,8 @@ class FactCollectionViewCell: UICollectionViewCell
         }
     }
     
-    func setFact(df: DogFact?) {
-        // print("SET ME")
-        fact = df
-        self.updateUI()
-    }
-    
     private func updateUI() {
-        // print("UPDATE")
         if let fact = fact {
-            print(fact.fact)
             factTitle.text = fact.title
             factLabel.text = fact.fact
             backgroundOverlay.backgroundColor = fact.color
@@ -45,12 +37,12 @@ class FactCollectionViewCell: UICollectionViewCell
     
     override func layoutSubviews() {
         super.layoutSubviews()
+        self.contentView.layer.cornerRadius = 8
+        self.contentView.layer.masksToBounds = true
         
-        self.layer.cornerRadius = 8
-        self.layer.shadowRadius = 10
-        self.layer.shadowOpacity = 0.4
-        self.layer.shadowOffset = CGSize(width: 5, height: 10)
+        self.layer.shadowOffset = CGSize(width: 0, height: 2)
+        self.layer.shadowRadius = 5
+        self.layer.shadowOpacity = 0.3
         self.layer.masksToBounds = false
-        self.clipsToBounds = true
     }
 }

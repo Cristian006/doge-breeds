@@ -2,7 +2,7 @@ import UIKit
 
 class DogFact
 {
-    var title = "Doge Fact"
+    var title = "Doggie Fact"
     var fact = ""
     var featuredImage: UIImage
     var color: UIColor
@@ -26,8 +26,6 @@ class DogFact
                 if let urlContent = data {
                     do {
                         let jsonResult = try JSONSerialization.jsonObject(with: urlContent, options: JSONSerialization.ReadingOptions.mutableContainers) as AnyObject
-                        // print(jsonResult)
-                        // print((jsonResult["facts"] as! [String]).count)
                         if let dogFact = jsonResult["facts"] {
                             DispatchQueue.main.async {
                                 callback((dogFact as! [String]))
