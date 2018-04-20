@@ -8,18 +8,21 @@
 
 import UIKit
 
-class FactsViewController: UIViewController {
-    @IBOutlet weak var collectionView: UICollectionView!
+class HomeViewController: UIViewController {
+    @IBOutlet weak var dogFactCollectionView: UICollectionView!
+    @IBOutlet weak var dogBreedTableView: UITableView!
     
     var dogFacts: [DogFact]! = [DogFact]()
+    var dogBreeds: [DogBreed]! = [DogBreed]()
     var cellScaling: CGFloat = 0.9
     
     override func viewDidLoad() {
         super.viewDidLoad()
         DogFact.dogFetchOperations(singleCallback: self.recivedDogFact)
-        //DogFact.fetchFacts(callback: self.recivedDogFacts)
         
-        let layout = collectionView!.collectionViewLayout as! UICollectionViewFlowLayout
+        DogBreed.dogBreedOperations(SingleCallback: self.receiveDogBreed)
+        
+        let layout = dogFactCollectionView!.collectionViewLayout as! UICollectionViewFlowLayout
         
         let screenSize = UIScreen.main.bounds.size
         let cellWidth = floor(screenSize.width * cellScaling) // scale card width to be 90% of screen width
@@ -31,15 +34,35 @@ class FactsViewController: UIViewController {
         
         layout.itemSize = CGSize(width: cellWidth, height: cellHeight)
         
-        collectionView?.contentInset = UIEdgeInsets(top: insetY, left: insetX, bottom: insetY, right: insetX)
+        dogFactCollectionView?.contentInset = UIEdgeInsets(top: insetY, left: insetX, bottom: insetY, right: insetX)
         
-        collectionView?.dataSource = self
-        collectionView?.delegate = self
+        dogBreedTableView?.dataSource = self
+        dogBreedTableView?.delegate = self
+        
+        dogFactCollectionView?.dataSource = self
+        dogFactCollectionView?.delegate = self
+    }
+    
+    func receiveDogBreeds(_ breeds: [DogBreed]) -> Void {
+        dogBreeds = breeds
+        dogBreedTableView!.reloadData()
+    }
+    
+    func receiveDogBreed(_ d: DogBreed) -> Void {
+        dogBreeds.append(d)
+        let indexPath = IndexPath(
+            item: self.dogBreeds.count - 1,
+            section: 0
+        )
+        
+        dogBreedTableView?.performBatchUpdates({
+            self.dogBreedTableView?.insertRows(at: [indexPath], with: .automatic)
+        }, completion: nil)
     }
     
     func recivedDogFacts(_ facts: [DogFact]) -> Void {
         dogFacts = facts
-        collectionView!.reloadData()
+        dogFactCollectionView!.reloadData()
     }
     
     func recivedDogFact(_ fact: DogFact) -> Void {
@@ -49,13 +72,33 @@ class FactsViewController: UIViewController {
             section: 0
         )
         
-        collectionView?.performBatchUpdates({
-            self.collectionView?.insertItems(at: [indexPath])
+        dogFactCollectionView?.performBatchUpdates({
+            self.dogFactCollectionView?.insertItems(at: [indexPath])
         }, completion: nil)
     }
 }
 
-extension FactsViewController : UICollectionViewDataSource
+extension HomeViewController : UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 300
+    }
+}
+
+extension HomeViewController : UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return dogBreeds.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = dogBreedTableView.dequeueReusableCell(withIdentifier: "BreedHomeCell") as! BreedTableViewCell
+        
+        cell.breed = dogBreeds[indexPath.item]
+        
+        return cell
+    }
+}
+
+extension HomeViewController : UICollectionViewDataSource
 {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
@@ -75,9 +118,9 @@ extension FactsViewController : UICollectionViewDataSource
     }
 }
 
-extension FactsViewController : UIScrollViewDelegate, UICollectionViewDelegate {
+extension HomeViewController : UIScrollViewDelegate, UICollectionViewDelegate {
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-        let layout = self.collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        let layout = self.dogFactCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
         let cellWidthIncludingSpacing = layout.itemSize.width + layout.minimumLineSpacing
         
         var offset = targetContentOffset.pointee

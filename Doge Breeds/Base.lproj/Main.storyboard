@@ -14,7 +14,7 @@
         <!--Home-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="FactsViewController" customModule="Doge_Breeds" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9pv-A4-QxB" customClass="HomeViewController" customModule="Doge_Breeds" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -98,7 +98,7 @@
                                 <rect key="frame" x="0.0" y="228" width="375" height="390"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="300" id="BhV-Xh-E8k">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BreedHomeCell" rowHeight="300" id="BhV-Xh-E8k" customClass="BreedTableViewCell" customModule="Doge_Breeds" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="300"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BhV-Xh-E8k" id="as7-7a-JRd">
@@ -175,6 +175,13 @@
                                                 <constraint firstAttribute="bottomMargin" secondItem="jkc-Xx-hcS" secondAttribute="bottom" constant="-11" id="ppU-8c-OYO"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="breedImage" destination="yJ8-o6-qte" id="vyg-VE-cf2"/>
+                                            <outlet property="breedLabel" destination="Osw-sQ-m6M" id="SRD-4H-XAx"/>
+                                            <outlet property="cellView" destination="jkc-Xx-hcS" id="nEr-f6-DDN"/>
+                                            <outlet property="infoLabel" destination="SN2-qL-hyo" id="F6Y-dR-9Ds"/>
+                                            <outlet property="originLabel" destination="SN2-qL-hyo" id="xr6-dN-dDq"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -193,7 +200,8 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="home" id="acW-dT-cKf"/>
                     <connections>
-                        <outlet property="collectionView" destination="by4-at-ZdM" id="BzP-nf-BP0"/>
+                        <outlet property="dogBreedTableView" destination="871-j1-VkY" id="uTH-ec-s4K"/>
+                        <outlet property="dogFactCollectionView" destination="by4-at-ZdM" id="BzP-nf-BP0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
