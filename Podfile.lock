@@ -1,20 +1,3 @@
-PODS:
-  - Koloda (4.3.1):
-    - pop (~> 1.0)
-  - pop (1.0.10)
-
-DEPENDENCIES:
-  - Koloda
-
-SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
-    - Koloda
-    - pop
-
-SPEC CHECKSUMS:
-  Koloda: 0d39b2aa188ccd1fac48d752acaf9802e683c625
-  pop: 82ca6b068ce9278fd350fd9dd09482a0ce9492e6
-
-PODFILE CHECKSUM: 093c8e48057ae7327742c4940954b8e9ae535181
+PODFILE CHECKSUM: 7a41293db93254e726bacb225a283e4ca55687f8
 
 COCOAPODS: 1.5.0
