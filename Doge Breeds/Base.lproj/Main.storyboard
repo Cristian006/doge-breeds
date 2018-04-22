@@ -11,6 +11,55 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Camera View Controller-->
+        <scene sceneID="RCt-o9-2li">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="FGX-5z-kmd" customClass="CameraViewController" customModule="Doge_Breeds" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="9gb-Fx-h7l">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uPR-oM-zRK">
+                                <rect key="frame" x="157.5" y="583" width="60" height="60"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="GWX-Ii-u4i"/>
+                                    <constraint firstAttribute="height" constant="60" id="OtL-08-Z9o"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wMk-3R-pTW">
+                                <rect key="frame" x="327" y="20" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="0ZX-mN-9fM"/>
+                                    <constraint firstAttribute="width" constant="32" id="oxN-Ue-QDk"/>
+                                </constraints>
+                                <state key="normal" image="clear_white"/>
+                                <connections>
+                                    <action selector="Back:" destination="FGX-5z-kmd" eventType="touchUpInside" id="h7i-rG-fcX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Rme-vc-hhV" firstAttribute="bottom" secondItem="uPR-oM-zRK" secondAttribute="bottom" constant="24" id="2wB-SA-qjN"/>
+                            <constraint firstItem="uPR-oM-zRK" firstAttribute="centerX" secondItem="9gb-Fx-h7l" secondAttribute="centerX" id="FJM-5V-z8w"/>
+                            <constraint firstItem="uPR-oM-zRK" firstAttribute="centerX" secondItem="Rme-vc-hhV" secondAttribute="centerX" id="YWp-Dk-bYi"/>
+                            <constraint firstItem="Rme-vc-hhV" firstAttribute="trailing" secondItem="wMk-3R-pTW" secondAttribute="trailing" constant="16" id="b7J-IN-u7R"/>
+                            <constraint firstItem="wMk-3R-pTW" firstAttribute="top" secondItem="Rme-vc-hhV" secondAttribute="top" id="ro6-qY-hOQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Rme-vc-hhV"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="reB-V0-OcA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="43P-a6-t5e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2970" y="1568"/>
+        </scene>
         <!--doggies-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
@@ -71,7 +120,7 @@
                                                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dog Fact" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A5M-7J-77L" userLabel="Fact">
+                                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dog Fact" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="A5M-7J-77L" userLabel="Fact">
                                                                         <rect key="frame" x="20" y="60" width="260" height="100"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="100" id="WbJ-vj-Xxz"/>
@@ -193,7 +242,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="U8f-OF-4q0"/>
                     </view>
-                    <navigationItem key="navigationItem" title="doggies" leftItemsSupplementBackButton="YES" id="7Ai-gw-HK0"/>
+                    <navigationItem key="navigationItem" title="doggies" leftItemsSupplementBackButton="YES" id="7Ai-gw-HK0">
+                        <barButtonItem key="leftBarButtonItem" title="Camera" image="camera" id="OBc-e3-DFn">
+                            <connections>
+                                <action selector="onCameraClick:" destination="9pv-A4-QxB" id="B22-8q-mun"/>
+                                <segue destination="FGX-5z-kmd" kind="showDetail" id="Mjl-8l-lCm"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="dogBreedCollectionView" destination="J8x-SI-xH9" id="jUH-4K-mvJ"/>
                         <outlet property="searchDisplayController" destination="i08-XX-QOS" id="aoc-TQ-yZz"/>
@@ -209,7 +265,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="-1135" y="2164"/>
+            <point key="canvasLocation" x="-1727" y="2128"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="QEh-Ux-GP6">
@@ -238,13 +294,15 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xvq-aA-4Ta" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="897" y="2158"/>
+            <point key="canvasLocation" x="479" y="2200"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cYI-gh-5YR">
             <objects>
                 <navigationController id="XHj-ZL-iSd" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="heart" id="1Rt-Ix-kaV"/>
+                    <tabBarItem key="tabBarItem" title="" image="heart" id="1Rt-Ix-kaV">
+                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4hd-q7-jz5">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -290,7 +348,9 @@
         <scene sceneID="cvh-o5-tYJ">
             <objects>
                 <navigationController id="TAe-Vl-oM4" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="bookmark" id="yKu-16-8Ig"/>
+                    <tabBarItem key="tabBarItem" title="" image="bookmark" id="yKu-16-8Ig">
+                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uW4-xh-Pg4">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -307,7 +367,9 @@
         <scene sceneID="mi1-pS-3Mo">
             <objects>
                 <navigationController id="X4D-Hc-Dxv" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="home" id="3UQ-SO-JJM"/>
+                    <tabBarItem key="tabBarItem" title="" image="home" id="3UQ-SO-JJM">
+                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
+                    </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MmQ-fP-U3Z">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -319,66 +381,19 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BSo-9M-wof" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-863" y="1326"/>
-        </scene>
-        <!--Root View Controller-->
-        <scene sceneID="cgM-vd-8zI">
-            <objects>
-                <tableViewController id="OSS-yV-L6h" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="l76-of-M7O">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="cum-De-NHF">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cum-De-NHF" id="KZh-er-I5a">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="OSS-yV-L6h" id="0hw-jX-o4g"/>
-                            <outlet property="delegate" destination="OSS-yV-L6h" id="z1x-t3-QkJ"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="dDw-Sm-1mA"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SNJ-oW-TtM" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-108" y="2122"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="r7r-Q1-cxF">
-            <objects>
-                <navigationController id="bWZ-cg-u0l" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="camera" id="g4y-bH-pJ1"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qe7-fD-gMw">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="OSS-yV-L6h" kind="relationship" relationship="rootViewController" id="Ah5-Ns-KKe"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uKy-E1-gCy" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-108" y="1337"/>
+            <point key="canvasLocation" x="-1300" y="1052"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
-                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                <tabBarController hidesBottomBarWhenPushed="YES" id="49e-Tb-3d3" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="X4D-Hc-Dxv" kind="relationship" relationship="viewControllers" id="5Pd-86-0mY"/>
-                        <segue destination="bWZ-cg-u0l" kind="relationship" relationship="viewControllers" id="E2q-ZZ-8ce"/>
                         <segue destination="XHj-ZL-iSd" kind="relationship" relationship="viewControllers" id="2QD-Do-78d"/>
                         <segue destination="TAe-Vl-oM4" kind="relationship" relationship="viewControllers" id="gls-jJ-Wgn"/>
                     </connections>
@@ -391,6 +406,7 @@
     <resources>
         <image name="bookmark" width="24" height="24"/>
         <image name="camera" width="24" height="24"/>
+        <image name="clear_white" width="24" height="24"/>
         <image name="corgi" width="275" height="183"/>
         <image name="heart" width="24" height="24"/>
         <image name="home" width="24" height="24"/>

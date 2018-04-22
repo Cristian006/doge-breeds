@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		31DFD20B1BD52782F78B8723 /* Pods_Doge_Breeds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5727BDFD6B134763F78EBEF /* Pods_Doge_Breeds.framework */; };
 		75070D4720887CEA009C8C22 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75070D4620887CEA009C8C22 /* Colors.swift */; };
 		75070D49208882D3009C8C22 /* Breeds.json in Resources */ = {isa = PBXBuildFile; fileRef = 75070D48208882D3009C8C22 /* Breeds.json */; };
 		752DBEBD208890FF0094859E /* DogBreed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752DBEBC208890FF0094859E /* DogBreed.swift */; };
@@ -19,9 +20,12 @@
 		757A1C9B2060B61B006E6FCC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 757A1C992060B61B006E6FCC /* Main.storyboard */; };
 		757A1C9D2060B61B006E6FCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 757A1C9C2060B61B006E6FCC /* Assets.xcassets */; };
 		757A1CA02060B61B006E6FCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 757A1C9E2060B61B006E6FCC /* LaunchScreen.storyboard */; };
+		75A1E9A8208BC989009285F4 /* SegueFromLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A1E9A7208BC989009285F4 /* SegueFromLeft.swift */; };
+		75A1E9AB208BCF9F009285F4 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A1E9AA208BCF9F009285F4 /* CameraViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		69C0BB2D00DFE2CBF7ED0E8A /* Pods-Doge Breeds.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Doge Breeds.release.xcconfig"; path = "Pods/Target Support Files/Pods-Doge Breeds/Pods-Doge Breeds.release.xcconfig"; sourceTree = "<group>"; };
 		75070D4620887CEA009C8C22 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		75070D48208882D3009C8C22 /* Breeds.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Breeds.json; sourceTree = "<group>"; };
 		752DBEBC208890FF0094859E /* DogBreed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogBreed.swift; sourceTree = "<group>"; };
@@ -36,6 +40,10 @@
 		757A1C9C2060B61B006E6FCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		757A1C9F2060B61B006E6FCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		757A1CA12060B61B006E6FCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		75A1E9A7208BC989009285F4 /* SegueFromLeft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueFromLeft.swift; sourceTree = "<group>"; };
+		75A1E9AA208BCF9F009285F4 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		B3AD99C16870358BE6BB165E /* Pods-Doge Breeds.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Doge Breeds.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Doge Breeds/Pods-Doge Breeds.debug.xcconfig"; sourceTree = "<group>"; };
+		D5727BDFD6B134763F78EBEF /* Pods_Doge_Breeds.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Doge_Breeds.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,12 +51,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31DFD20B1BD52782F78B8723 /* Pods_Doge_Breeds.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2AB9ADB47C2EC6BA4223F4DB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D5727BDFD6B134763F78EBEF /* Pods_Doge_Breeds.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		75070D4520887CC4009C8C22 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +99,8 @@
 			children = (
 				757A1C922060B61B006E6FCC /* Doge Breeds */,
 				757A1C912060B61B006E6FCC /* Products */,
+				98FD67C740C1A2288A867B66 /* Pods */,
+				2AB9ADB47C2EC6BA4223F4DB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,6 +115,8 @@
 		757A1C922060B61B006E6FCC /* Doge Breeds */ = {
 			isa = PBXGroup;
 			children = (
+				75A1E9A9208BCF73009285F4 /* BreedCamera */,
+				75A1E9A6208BC966009285F4 /* Custom */,
 				75070D4520887CC4009C8C22 /* Utils */,
 				754C7650207DD90600FB1991 /* HomeScreen */,
 				7537631B2075E751003AC3B9 /* Model */,
@@ -109,6 +130,31 @@
 			path = "Doge Breeds";
 			sourceTree = "<group>";
 		};
+		75A1E9A6208BC966009285F4 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				75A1E9A7208BC989009285F4 /* SegueFromLeft.swift */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		75A1E9A9208BCF73009285F4 /* BreedCamera */ = {
+			isa = PBXGroup;
+			children = (
+				75A1E9AA208BCF9F009285F4 /* CameraViewController.swift */,
+			);
+			path = BreedCamera;
+			sourceTree = "<group>";
+		};
+		98FD67C740C1A2288A867B66 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B3AD99C16870358BE6BB165E /* Pods-Doge Breeds.debug.xcconfig */,
+				69C0BB2D00DFE2CBF7ED0E8A /* Pods-Doge Breeds.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -116,9 +162,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 757A1CA42060B61B006E6FCC /* Build configuration list for PBXNativeTarget "Doge Breeds" */;
 			buildPhases = (
+				A890603DCBC0076E7B2D6A42 /* [CP] Check Pods Manifest.lock */,
 				757A1C8C2060B61B006E6FCC /* Sources */,
 				757A1C8D2060B61B006E6FCC /* Frameworks */,
 				757A1C8E2060B61B006E6FCC /* Resources */,
+				F96D30877C01A097CD19423C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -177,11 +225,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A890603DCBC0076E7B2D6A42 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Doge Breeds-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F96D30877C01A097CD19423C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Doge Breeds/Pods-Doge Breeds-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Koloda/Koloda.framework",
+				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Koloda.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Doge Breeds/Pods-Doge Breeds-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		757A1C8C2060B61B006E6FCC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75A1E9A8208BC989009285F4 /* SegueFromLeft.swift in Sources */,
+				75A1E9AB208BCF9F009285F4 /* CameraViewController.swift in Sources */,
 				755C7BDC208996A30020AA64 /* BreedCollectionViewCell.swift in Sources */,
 				754C764F207DD34F00FB1991 /* HomeViewController.swift in Sources */,
 				75070D4720887CEA009C8C22 /* Colors.swift in Sources */,
@@ -324,6 +415,7 @@
 		};
 		757A1CA52060B61B006E6FCC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3AD99C16870358BE6BB165E /* Pods-Doge Breeds.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -339,6 +431,7 @@
 		};
 		757A1CA62060B61B006E6FCC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 69C0BB2D00DFE2CBF7ED0E8A /* Pods-Doge Breeds.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
