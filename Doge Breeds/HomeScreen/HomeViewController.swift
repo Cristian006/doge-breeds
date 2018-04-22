@@ -12,6 +12,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var dogBreedCollectionView: UICollectionView!
     
     var dogBreeds: [DogBreed]! = [DogBreed]()
+    var selectedDogIndex = -1
     
     let FactParentCellID = "FactsParentCell"
     let BreedCellID = "BreedCell"
@@ -84,6 +85,22 @@ extension HomeViewController : UICollectionViewDataSource, UICollectionViewDeleg
         } else {
             let insetX = ((view.bounds.width * 0.1)) / 4
             return UIEdgeInsets(top: 0, left: insetX, bottom: 0, right: insetX)
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if(indexPath.section == 1) {
+            selectedDogIndex = indexPath.item
+            self.performSegue(withIdentifier: "ShowBreedDetail", sender: self)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if segue.destination is BreedDetailViewController
+        {
+            let vc = segue.destination as? BreedDetailViewController
+            vc?.breed = self.dogBreeds[self.selectedDogIndex]
         }
     }
 }

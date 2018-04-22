@@ -1,19 +1,26 @@
 //
-//  CameraViewController.swift
+//  BreedDetailViewController.swift
 //  Doge Breeds
 //
-//  Created by Cristian Ponce on 4/21/18.
+//  Created by Cristian Ponce on 4/22/18.
 //  Copyright © 2018 Cristian Ponce. All rights reserved.
 //
 
 import UIKit
 
-class CameraViewController: UIViewController {
+class BreedDetailViewController: UIViewController {
 
-    @IBAction func Back(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+    var breed: DogBreed? {
+        didSet {
+            self.updateUI()
+        }
     }
-
+    
+    func updateUI() {
+        print(breed?.name ?? "EMPTY BREED")
+        self.title = breed?.name ?? "Dogie"
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,6 +32,7 @@ class CameraViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+
     /*
     // MARK: - Navigation
 

@@ -1,18 +1,14 @@
 //
-//  CameraViewController.swift
+//  BookmarksViewController.swift
 //  Doge Breeds
 //
-//  Created by Cristian Ponce on 4/21/18.
+//  Created by Cristian Ponce on 4/22/18.
 //  Copyright © 2018 Cristian Ponce. All rights reserved.
 //
 
 import UIKit
 
-class CameraViewController: UIViewController {
-
-    @IBAction func Back(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
+class BookmarksViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +21,7 @@ class CameraViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+
     /*
     // MARK: - Navigation
 
