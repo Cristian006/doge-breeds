@@ -5,4 +5,5 @@ target 'Doge Breeds' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
   pod 'pop', '1.0.10'
+  pod 'SwiftyJSON', '~> 4.0'
 end

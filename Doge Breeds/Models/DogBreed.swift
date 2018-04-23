@@ -6,6 +6,7 @@
 //  Copyright © 2018 Cristian Ponce. All rights reserved.
 //
 import UIKit
+import  SwiftyJSON
 
 struct factsStructure {
     var height: String?
@@ -66,48 +67,36 @@ class DogBreed
         let operation1 = BlockOperation {
             do {
                 let data = try Data(contentsOf: url)
-                if let breeds = try ((JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSArray)) {
-                    for obj in breeds {
-                        let breed: DogBreed?
-                        if let dic = obj as? NSDictionary {
-                            breed = DogBreed()
-                            for (key, value) in dic {
-                                switch (key as! String) {
-                                case "details":
-                                    if let d = value as? [String: Any]{
-                                        var specialObj: specialDetails? = specialDetails()
-                                        
-                                        if let s = value as? [String: Any] {
-                                            specialObj = specialDetails(exersise: s["exercise"] as? String, grooming: s["grooming"] as? String)
-                                        }
-                                        
-                                        breed?.details = detailStructure(aka: d["aka"] as? String, group: d["group"] as? String, health: d["health"] as? String, history: d["history"] as? String, origin: d["origin"] as? String, role: d["role"] as? String, temparment: d["temparment"] as? String, special: specialObj)
-                                    }
-                                case "img":
-                                    if let i = value as? String {
-                                        breed?.img = i
-                                    }
-                                case "name":
-                                    if let i = value as? String {
-                                        breed?.name = i
-                                    }
-                                case "link":
-                                    if let i = value as? String {
-                                        breed?.link = i
-                                    }
-                                case "facts":
-                                    if let f = value as? [String: Any]{
-                                        breed?.facts = factsStructure(height: f["height"] as? String, life: f["life"] as? String, size: f["size"] as? String, weight: f["weight"] as? String)
-                                    }
-                                default:
-                                    print("WE NEED THIS VALUE")
-                                    print(key)
-                                }
-                            }
-                            DispatchQueue.main.async {
-                                SingleCallback(breed!)
-                            }
-                        }
+                let breeds = try? JSON(data: data)
+                
+                for (_, json):(String, JSON) in breeds! {
+                    // Do something you want
+                    let breed = DogBreed(
+                        name: (json["name"].string)!,
+                        link: (json["link"].string)!,
+                        img: (json["img"].string)!,
+                        facts: factsStructure(
+                            height: json["facts", "height"].string,
+                            life: json["facts", "life"].string,
+                            size: json["facts", "size"].string,
+                            weight: json["facts", "weight"].string
+                        ),
+                        details: detailStructure(
+                            aka: json["details", "aka"].string,
+                            group: json["details", "group"].string,
+                            health: json["details", "health"].string,
+                            history: json["details", "history"].string,
+                            origin: json["details", "origin"].string,
+                            role: json["details", "role"].string,
+                            temparment: json["details", "temparment"].string,
+                            special: specialDetails(
+                                exersise: json["details", "exersise"].string,
+                                grooming: json["details", "grooming"].string
+                            )
+                        )
+                    )
+                    DispatchQueue.main.async {
+                        SingleCallback(breed)
                     }
                 }
             } catch {

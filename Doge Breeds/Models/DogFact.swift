@@ -1,4 +1,5 @@
 import UIKit
+import SwiftyJSON
 
 class DogFact
 {
@@ -29,18 +30,14 @@ class DogFact
                 print(error!)
             } else {
                 if let urlContent = data {
-                    do {
-                        let jsonResult = try JSONSerialization.jsonObject(with: urlContent, options: JSONSerialization.ReadingOptions.mutableContainers) as AnyObject
-                        if let imageUrl = jsonResult["message"] {
-                            let data = try? Data(contentsOf: URL(string: (imageUrl as! String))!)
-                            DispatchQueue.main.async {
-                                callback(UIImage(data: data!)!)
-                            }
-                        } else {
-                            callback(UIImage(named: "corgi")!)
+                    let json = try? JSON(data: urlContent)
+                    if let message = json?["message"].string {
+                        let data = try? Data(contentsOf: URL(string: message)!)
+                        DispatchQueue.main.async {
+                            callback(UIImage(data: data!)!)
                         }
-                    } catch {
-                        print ("Json Processing Failed")
+                    } else {
+                        callback(UIImage(named: "corgi")!)
                     }
                 }
             }
@@ -103,11 +100,8 @@ class DogFact
                 }
                 group.leave()
             })
-            
-            print(dFacts.count)
+
             group.wait()
-            print(dFacts.count)
-            print("loadedFacts")
             DispatchQueue.main.async {
                 callback(dFacts)
             }

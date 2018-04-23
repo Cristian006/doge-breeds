@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		340EB6E5A637144231D114AB /* Pods_Doge_Breeds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D536A0BE428EF68557B170F0 /* Pods_Doge_Breeds.framework */; };
 		75070D4720887CEA009C8C22 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75070D4620887CEA009C8C22 /* Colors.swift */; };
 		75070D49208882D3009C8C22 /* Breeds.json in Resources */ = {isa = PBXBuildFile; fileRef = 75070D48208882D3009C8C22 /* Breeds.json */; };
 		752DBEBD208890FF0094859E /* DogBreed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752DBEBC208890FF0094859E /* DogBreed.swift */; };
@@ -39,9 +38,11 @@
 		757A1C9D2060B61B006E6FCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 757A1C9C2060B61B006E6FCC /* Assets.xcassets */; };
 		757A1CA02060B61B006E6FCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 757A1C9E2060B61B006E6FCC /* LaunchScreen.storyboard */; };
 		75A1E9AB208BCF9F009285F4 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A1E9AA208BCF9F009285F4 /* CameraViewController.swift */; };
+		F9BDC1663A8B530C10ABB65E /* Pods_Doge_Breeds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 326457D6211FAEBA7981A6FF /* Pods_Doge_Breeds.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		326457D6211FAEBA7981A6FF /* Pods_Doge_Breeds.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Doge_Breeds.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		69C0BB2D00DFE2CBF7ED0E8A /* Pods-Doge Breeds.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Doge Breeds.release.xcconfig"; path = "Pods/Target Support Files/Pods-Doge Breeds/Pods-Doge Breeds.release.xcconfig"; sourceTree = "<group>"; };
 		75070D4620887CEA009C8C22 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		75070D48208882D3009C8C22 /* Breeds.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Breeds.json; sourceTree = "<group>"; };
@@ -77,7 +78,6 @@
 		757A1CA12060B61B006E6FCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75A1E9AA208BCF9F009285F4 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		B3AD99C16870358BE6BB165E /* Pods-Doge Breeds.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Doge Breeds.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Doge Breeds/Pods-Doge Breeds.debug.xcconfig"; sourceTree = "<group>"; };
-		D536A0BE428EF68557B170F0 /* Pods_Doge_Breeds.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Doge_Breeds.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				340EB6E5A637144231D114AB /* Pods_Doge_Breeds.framework in Frameworks */,
+				F9BDC1663A8B530C10ABB65E /* Pods_Doge_Breeds.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,7 +95,7 @@
 		2AB9ADB47C2EC6BA4223F4DB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D536A0BE428EF68557B170F0 /* Pods_Doge_Breeds.framework */,
+				326457D6211FAEBA7981A6FF /* Pods_Doge_Breeds.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -310,10 +310,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Doge Breeds/Pods-Doge Breeds-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
