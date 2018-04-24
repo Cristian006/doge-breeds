@@ -10,8 +10,10 @@ import UIKit
 
 struct MatchCardViewModel
 {
-    let title: String
-    let subtitle: String
+    let title: String?
+    let subtitle: String?
+    let location: String?
     let color: UIColor?
     let image: UIImage?
+    let sex: String?
 }

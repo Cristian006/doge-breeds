@@ -313,19 +313,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jJI-3H-WJj" customClass="SwipeableCardViewContainer" customModule="Doge_Breeds" customModuleProvider="target">
-                                <rect key="frame" x="16" y="80" width="343" height="400"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="400"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="400" id="kbM-mk-4UO"/>
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="jJI-3H-WJj" firstAttribute="top" secondItem="APB-eg-FWN" secondAttribute="top" constant="16" id="Epc-vu-2mZ"/>
-                            <constraint firstItem="jJI-3H-WJj" firstAttribute="leading" secondItem="APB-eg-FWN" secondAttribute="leading" constant="16" id="Qne-Nq-HRb"/>
+                            <constraint firstItem="jJI-3H-WJj" firstAttribute="top" secondItem="APB-eg-FWN" secondAttribute="top" id="Epc-vu-2mZ"/>
+                            <constraint firstItem="jJI-3H-WJj" firstAttribute="leading" secondItem="APB-eg-FWN" secondAttribute="leading" id="Qne-Nq-HRb"/>
                             <constraint firstItem="jJI-3H-WJj" firstAttribute="centerX" secondItem="APB-eg-FWN" secondAttribute="centerX" id="lLa-AA-WcO"/>
-                            <constraint firstItem="APB-eg-FWN" firstAttribute="trailing" secondItem="jJI-3H-WJj" secondAttribute="trailing" constant="16" id="twV-3C-36z"/>
+                            <constraint firstItem="APB-eg-FWN" firstAttribute="trailing" secondItem="jJI-3H-WJj" secondAttribute="trailing" id="twV-3C-36z"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="APB-eg-FWN"/>
                     </view>

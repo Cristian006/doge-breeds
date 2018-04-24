@@ -42,6 +42,8 @@
 		759075A0208ED34800605022 /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7590759F208ED34800605022 /* BaseCell.swift */; };
 		75A1E9AB208BCF9F009285F4 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A1E9AA208BCF9F009285F4 /* CameraViewController.swift */; };
 		75F11943208EFA190053C9DC /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F11942208EFA190053C9DC /* DetailsView.swift */; };
+		75F11947208F217F0053C9DC /* PetFinderDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F11946208F217F0053C9DC /* PetFinderDecoder.swift */; };
+		75F11949208F3E690053C9DC /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F11948208F3E690053C9DC /* Utils.swift */; };
 		F9BDC1663A8B530C10ABB65E /* Pods_Doge_Breeds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 326457D6211FAEBA7981A6FF /* Pods_Doge_Breeds.framework */; };
 /* End PBXBuildFile section */
 
@@ -85,6 +87,8 @@
 		7590759F208ED34800605022 /* BaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCell.swift; sourceTree = "<group>"; };
 		75A1E9AA208BCF9F009285F4 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		75F11942208EFA190053C9DC /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
+		75F11946208F217F0053C9DC /* PetFinderDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetFinderDecoder.swift; sourceTree = "<group>"; };
+		75F11948208F3E690053C9DC /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		B3AD99C16870358BE6BB165E /* Pods-Doge Breeds.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Doge Breeds.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Doge Breeds/Pods-Doge Breeds.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,6 +117,8 @@
 			children = (
 				75070D4620887CEA009C8C22 /* Colors.swift */,
 				75070D48208882D3009C8C22 /* Breeds.json */,
+				75F11946208F217F0053C9DC /* PetFinderDecoder.swift */,
+				75F11948208F3E690053C9DC /* Utils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -392,6 +398,7 @@
 				753A736F208C8ECC0032B725 /* SwipeableViewDelegate.swift in Sources */,
 				753A737A208C91290032B725 /* MatchCardViewModel.swift in Sources */,
 				753A736B208C8ECC0032B725 /* SwipeDirection.swift in Sources */,
+				75F11949208F3E690053C9DC /* Utils.swift in Sources */,
 				753A7369208C8ECC0032B725 /* SwipeableCardViewDelegate.swift in Sources */,
 				753A7374208C8ECC0032B725 /* SwipeableCardViewDataSource.swift in Sources */,
 				753A7372208C8ECC0032B725 /* SwipeableCardViewCard.swift in Sources */,
@@ -412,6 +419,7 @@
 				753A7370208C8ECC0032B725 /* NibView.swift in Sources */,
 				757A1C942060B61B006E6FCC /* AppDelegate.swift in Sources */,
 				753A736A208C8ECC0032B725 /* SwipeableCardViewContainer.swift in Sources */,
+				75F11947208F217F0053C9DC /* PetFinderDecoder.swift in Sources */,
 				754C764D207DCD8A00FB1991 /* FactCollectionViewCell.swift in Sources */,
 				753A7380208CA1490032B725 /* BreedDetailViewController.swift in Sources */,
 				753A7371208C8ECC0032B725 /* SwipeableView.swift in Sources */,

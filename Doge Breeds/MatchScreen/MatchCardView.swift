@@ -13,7 +13,8 @@ class MatchCardView: SwipeableCardViewCard {
     
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var subtitleLabel: UILabel!
-    @IBOutlet private weak var addButton: UIView!
+    @IBOutlet private weak var locationLabel: UILabel!
+    @IBOutlet private weak var sexImage: UIImageView!
     
     @IBOutlet private weak var imageBackgroundColorView: UIView!
     @IBOutlet private weak var imageView: UIImageView!
@@ -40,9 +41,9 @@ class MatchCardView: SwipeableCardViewCard {
             subtitleLabel.text = viewModel.subtitle
             imageBackgroundColorView.backgroundColor = viewModel.color
             imageView.image = viewModel.image
-            
+            locationLabel.text = viewModel.location
+            sexImage.image = UIImage(named: (viewModel.sex == "M" ? "gender-male" : "gender-female"))
             backgroundContainerView.layer.cornerRadius = 14.0
-            addButton.layer.cornerRadius = addButton.frame.size.height/4
         }
     }
     
