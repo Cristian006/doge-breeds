@@ -46,7 +46,6 @@ class DogFact
     }
     
     static func fetchFacts(callback: dogFactStringCallback!) {
-        print("fact fetch")
         // dog fact api for random dog fact
         let url = URL(string: "http://dog-api.kinduff.com/api/facts?number=5")
         let task = URLSession.shared.dataTask(with: url!) { (data, response, error) in
@@ -74,7 +73,6 @@ class DogFact
     
     // returns an array of dog facts
     static func dogFetchOperations(callback: dogFactsCallback!){
-        print("fetching")
         let opQueue = OperationQueue()
         
         var dFacts: [DogFact]! = [DogFact]()
@@ -87,7 +85,6 @@ class DogFact
                 for f in facts {
                     group.enter()
                     fetchRandomImage(callback: { (image) in
-                        print(f)
                         dFacts.append(DogFact(
                             title: "Doggie Fact",
                             fact: f,
@@ -137,7 +134,6 @@ class DogFact
                 group.leave()
             })
             group.wait()
-            print("loadedFacts")
         }
         
         opQueue.addOperation(operation1)

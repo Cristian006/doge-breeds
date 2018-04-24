@@ -37,7 +37,11 @@
 		757A1C9B2060B61B006E6FCC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 757A1C992060B61B006E6FCC /* Main.storyboard */; };
 		757A1C9D2060B61B006E6FCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 757A1C9C2060B61B006E6FCC /* Assets.xcassets */; };
 		757A1CA02060B61B006E6FCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 757A1C9E2060B61B006E6FCC /* LaunchScreen.storyboard */; };
+		7590759C208ECE6900605022 /* BreedHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7590759B208ECE6900605022 /* BreedHeaderView.xib */; };
+		7590759E208ED24900605022 /* BreedHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7590759D208ED24900605022 /* BreedHeaderView.swift */; };
+		759075A0208ED34800605022 /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7590759F208ED34800605022 /* BaseCell.swift */; };
 		75A1E9AB208BCF9F009285F4 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A1E9AA208BCF9F009285F4 /* CameraViewController.swift */; };
+		75F11943208EFA190053C9DC /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F11942208EFA190053C9DC /* DetailsView.swift */; };
 		F9BDC1663A8B530C10ABB65E /* Pods_Doge_Breeds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 326457D6211FAEBA7981A6FF /* Pods_Doge_Breeds.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,7 +80,11 @@
 		757A1C9C2060B61B006E6FCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		757A1C9F2060B61B006E6FCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		757A1CA12060B61B006E6FCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7590759B208ECE6900605022 /* BreedHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BreedHeaderView.xib; sourceTree = "<group>"; };
+		7590759D208ED24900605022 /* BreedHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedHeaderView.swift; sourceTree = "<group>"; };
+		7590759F208ED34800605022 /* BaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCell.swift; sourceTree = "<group>"; };
 		75A1E9AA208BCF9F009285F4 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		75F11942208EFA190053C9DC /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
 		B3AD99C16870358BE6BB165E /* Pods-Doge Breeds.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Doge Breeds.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Doge Breeds/Pods-Doge Breeds.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -167,10 +175,10 @@
 		754C7650207DD90600FB1991 /* HomeScreen */ = {
 			isa = PBXGroup;
 			children = (
+				7590759A208EC9CA00605022 /* BreedDetail */,
 				754C764C207DCD8A00FB1991 /* FactCollectionViewCell.swift */,
 				754C764E207DD34F00FB1991 /* HomeViewController.swift */,
 				755C7BDB208996A30020AA64 /* BreedCollectionViewCell.swift */,
-				753A737F208CA1490032B725 /* BreedDetailViewController.swift */,
 				753A7381208CA4EE0032B725 /* BookmarksViewController.swift */,
 			);
 			path = HomeScreen;
@@ -213,12 +221,40 @@
 			path = "Doge Breeds";
 			sourceTree = "<group>";
 		};
+		7590759A208EC9CA00605022 /* BreedDetail */ = {
+			isa = PBXGroup;
+			children = (
+				75F11941208EF9FE0053C9DC /* Details */,
+				75F11940208EF4A10053C9DC /* Header */,
+				753A737F208CA1490032B725 /* BreedDetailViewController.swift */,
+				7590759F208ED34800605022 /* BaseCell.swift */,
+			);
+			path = BreedDetail;
+			sourceTree = "<group>";
+		};
 		75A1E9A9208BCF73009285F4 /* BreedCamera */ = {
 			isa = PBXGroup;
 			children = (
 				75A1E9AA208BCF9F009285F4 /* CameraViewController.swift */,
 			);
 			path = BreedCamera;
+			sourceTree = "<group>";
+		};
+		75F11940208EF4A10053C9DC /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				7590759B208ECE6900605022 /* BreedHeaderView.xib */,
+				7590759D208ED24900605022 /* BreedHeaderView.swift */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		75F11941208EF9FE0053C9DC /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				75F11942208EFA190053C9DC /* DetailsView.swift */,
+			);
+			path = Details;
 			sourceTree = "<group>";
 		};
 		98FD67C740C1A2288A867B66 /* Pods */ = {
@@ -292,6 +328,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				753A7373208C8ECC0032B725 /* SwipeableCardViewCard.xib in Resources */,
+				7590759C208ECE6900605022 /* BreedHeaderView.xib in Resources */,
 				75070D49208882D3009C8C22 /* Breeds.json in Resources */,
 				753A737C208C91BF0032B725 /* MatchCardView.xib in Resources */,
 				757A1CA02060B61B006E6FCC /* LaunchScreen.storyboard in Resources */,
@@ -310,11 +347,13 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Doge Breeds/Pods-Doge Breeds-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
 			);
@@ -356,13 +395,16 @@
 				753A7369208C8ECC0032B725 /* SwipeableCardViewDelegate.swift in Sources */,
 				753A7374208C8ECC0032B725 /* SwipeableCardViewDataSource.swift in Sources */,
 				753A7372208C8ECC0032B725 /* SwipeableCardViewCard.swift in Sources */,
+				7590759E208ED24900605022 /* BreedHeaderView.swift in Sources */,
 				753A736C208C8ECC0032B725 /* UIView+Constraints.swift in Sources */,
 				75A1E9AB208BCF9F009285F4 /* CameraViewController.swift in Sources */,
 				755C7BDC208996A30020AA64 /* BreedCollectionViewCell.swift in Sources */,
 				753A7378208C90AB0032B725 /* MatchViewController.swift in Sources */,
+				759075A0208ED34800605022 /* BaseCell.swift in Sources */,
 				754C764F207DD34F00FB1991 /* HomeViewController.swift in Sources */,
 				75070D4720887CEA009C8C22 /* Colors.swift in Sources */,
 				7537631D2075E786003AC3B9 /* DogFact.swift in Sources */,
+				75F11943208EFA190053C9DC /* DetailsView.swift in Sources */,
 				753A737E208C92BA0032B725 /* MatchCardView.swift in Sources */,
 				757A1C982060B61B006E6FCC /* SecondViewController.swift in Sources */,
 				753A736D208C8ECC0032B725 /* CGPoint+SwipeableAdditions.swift in Sources */,

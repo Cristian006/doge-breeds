@@ -58,7 +58,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="43P-a6-t5e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2722" y="2128"/>
+            <point key="canvasLocation" x="-2593" y="2128"/>
         </scene>
         <!--Doggies-->
         <scene sceneID="hNz-n2-bh7">
@@ -70,7 +70,7 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="J8x-SI-xH9" userLabel="Dog Breed Collection View">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
-                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="N5s-9K-nAB">
                                     <size key="itemSize" width="100" height="300"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -271,7 +271,6 @@
                     <connections>
                         <outlet property="dogBreedCollectionView" destination="J8x-SI-xH9" id="jUH-4K-mvJ"/>
                         <outlet property="searchDisplayController" destination="i08-XX-QOS" id="aoc-TQ-yZz"/>
-                        <segue destination="HAg-lt-Pez" kind="show" identifier="ShowBreedDetail" id="t1Y-ga-3jW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
@@ -285,21 +284,6 @@
                 </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="-1727.2" y="2127.8860569715143"/>
-        </scene>
-        <!--Breed Detail View Controller-->
-        <scene sceneID="xNE-NP-T4d">
-            <objects>
-                <viewController id="HAg-lt-Pez" customClass="BreedDetailViewController" customModule="Doge_Breeds" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="1o2-rn-8Ny">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="P6W-0i-kJG"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="EFc-hM-Jyc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1727" y="3046"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cYI-gh-5YR">
@@ -367,7 +351,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GsY-Vn-ufm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-687" y="1863"/>
+            <point key="canvasLocation" x="-874" y="2128"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mi1-pS-3Mo">

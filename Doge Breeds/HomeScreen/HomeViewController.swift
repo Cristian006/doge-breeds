@@ -12,7 +12,6 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var dogBreedCollectionView: UICollectionView!
     
     var dogBreeds: [DogBreed]! = [DogBreed]()
-    var selectedDogIndex = -1
     
     let FactParentCellID = "FactsParentCell"
     let BreedCellID = "BreedCell"
@@ -28,6 +27,13 @@ class HomeViewController: UIViewController {
         
         dogBreedCollectionView?.dataSource = self
         dogBreedCollectionView?.delegate = self
+    }
+    
+    func showBreedDetailFor(breed: DogBreed) {
+        let layout = UICollectionViewFlowLayout()
+        let breedDetailController = BreedDetailViewController(collectionViewLayout: layout)
+        breedDetailController.breed = breed
+        navigationController?.pushViewController(breedDetailController, animated: true)
     }
     
     func receiveDogBreed(_ d: DogBreed) -> Void {
@@ -63,11 +69,11 @@ extension HomeViewController : UICollectionViewDataSource, UICollectionViewDeleg
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FactParentCellID, for: indexPath) as! FactsParentCell
             cell.setup()
             return cell
-        } else {
-            let cell = dogBreedCollectionView.dequeueReusableCell(withReuseIdentifier: BreedCellID, for: indexPath) as! BreedCollectionViewCell
-            cell.breed = dogBreeds[indexPath.item]
-            return cell
         }
+        
+        let cell = dogBreedCollectionView.dequeueReusableCell(withReuseIdentifier: BreedCellID, for: indexPath) as! BreedCollectionViewCell
+        cell.breed = dogBreeds[indexPath.item]
+        return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -90,17 +96,9 @@ extension HomeViewController : UICollectionViewDataSource, UICollectionViewDeleg
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if(indexPath.section == 1) {
-            selectedDogIndex = indexPath.item
-            self.performSegue(withIdentifier: "ShowBreedDetail", sender: self)
-        }
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
-    {
-        if segue.destination is BreedDetailViewController
-        {
-            let vc = segue.destination as? BreedDetailViewController
-            vc?.breed = self.dogBreeds[self.selectedDogIndex]
+            if let dogBreed = self.dogBreeds?[indexPath.item] {
+                self.showBreedDetailFor(breed: dogBreed)
+            }
         }
     }
 }
