@@ -31,8 +31,10 @@ class HomeViewController: UIViewController {
     
     func showBreedDetailFor(breed: DogBreed) {
         let layout = UICollectionViewFlowLayout()
+        
         let breedDetailController = BreedDetailViewController(collectionViewLayout: layout)
         breedDetailController.breed = breed
+
         navigationController?.pushViewController(breedDetailController, animated: true)
     }
     

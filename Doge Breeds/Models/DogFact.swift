@@ -18,9 +18,6 @@ class DogFact
         self.fact = fact!
         self.color = color
         self.featuredImage = image
-        // self.fetchRandomImage { (image) in
-        //    self.featuredImage = image
-        // }
     }
     
     static func fetchRandomImage(callback: dogImageCallback!) {
@@ -32,9 +29,11 @@ class DogFact
                 if let urlContent = data {
                     let json = try? JSON(data: urlContent)
                     if let message = json?["message"].string {
-                        let data = try? Data(contentsOf: URL(string: message)!)
-                        DispatchQueue.main.async {
-                            callback(UIImage(data: data!)!)
+                        if let url = URL(string: message) {
+                            let data = try? Data(contentsOf: url)
+                            DispatchQueue.main.async {
+                                callback(UIImage(data: data!)!)
+                            }
                         }
                     } else {
                         callback(UIImage(named: "corgi")!)
@@ -78,7 +77,6 @@ class DogFact
         var dFacts: [DogFact]! = [DogFact]()
         
         let operation1 = BlockOperation {
-            print("operation 1")
             let group = DispatchGroup()
             group.enter()
             fetchFacts(callback: { (facts) in
@@ -112,7 +110,6 @@ class DogFact
         let opQueue = OperationQueue()
         
         let operation1 = BlockOperation {
-            print("operation 1")
             let group = DispatchGroup()
             group.enter()
             fetchFacts(callback: { (facts) in

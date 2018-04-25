@@ -33,7 +33,6 @@ class BaseCell: UICollectionViewCell {
     }
     
     func loadView() {
-        print("loadview")
         let contentView = loadViewFromNib()
         contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         contentView.frame = bounds

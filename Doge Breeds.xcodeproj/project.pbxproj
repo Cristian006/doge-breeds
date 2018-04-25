@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		749ECE6A0B4243F492D7BB50 /* Pods_Doge_Breeds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCA015F68F126EAAC1E40517 /* Pods_Doge_Breeds.framework */; };
 		75070D4720887CEA009C8C22 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75070D4620887CEA009C8C22 /* Colors.swift */; };
 		75070D49208882D3009C8C22 /* Breeds.json in Resources */ = {isa = PBXBuildFile; fileRef = 75070D48208882D3009C8C22 /* Breeds.json */; };
 		752DBEBD208890FF0094859E /* DogBreed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752DBEBC208890FF0094859E /* DogBreed.swift */; };
@@ -37,18 +38,18 @@
 		757A1C9B2060B61B006E6FCC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 757A1C992060B61B006E6FCC /* Main.storyboard */; };
 		757A1C9D2060B61B006E6FCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 757A1C9C2060B61B006E6FCC /* Assets.xcassets */; };
 		757A1CA02060B61B006E6FCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 757A1C9E2060B61B006E6FCC /* LaunchScreen.storyboard */; };
+		758AF567208FD3B9005F3697 /* GradientImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758AF566208FD3B9005F3697 /* GradientImageView.swift */; };
 		7590759C208ECE6900605022 /* BreedHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7590759B208ECE6900605022 /* BreedHeaderView.xib */; };
 		7590759E208ED24900605022 /* BreedHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7590759D208ED24900605022 /* BreedHeaderView.swift */; };
 		759075A0208ED34800605022 /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7590759F208ED34800605022 /* BaseCell.swift */; };
 		75A1E9AB208BCF9F009285F4 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A1E9AA208BCF9F009285F4 /* CameraViewController.swift */; };
+		75A48C55208FF3C20090A472 /* BreedDetailViewController+descriptionAttributedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A48C54208FF3C20090A472 /* BreedDetailViewController+descriptionAttributedText.swift */; };
 		75F11943208EFA190053C9DC /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F11942208EFA190053C9DC /* DetailsView.swift */; };
 		75F11947208F217F0053C9DC /* PetFinderDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F11946208F217F0053C9DC /* PetFinderDecoder.swift */; };
 		75F11949208F3E690053C9DC /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F11948208F3E690053C9DC /* Utils.swift */; };
-		F9BDC1663A8B530C10ABB65E /* Pods_Doge_Breeds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 326457D6211FAEBA7981A6FF /* Pods_Doge_Breeds.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		326457D6211FAEBA7981A6FF /* Pods_Doge_Breeds.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Doge_Breeds.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		69C0BB2D00DFE2CBF7ED0E8A /* Pods-Doge Breeds.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Doge Breeds.release.xcconfig"; path = "Pods/Target Support Files/Pods-Doge Breeds/Pods-Doge Breeds.release.xcconfig"; sourceTree = "<group>"; };
 		75070D4620887CEA009C8C22 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		75070D48208882D3009C8C22 /* Breeds.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Breeds.json; sourceTree = "<group>"; };
@@ -82,14 +83,17 @@
 		757A1C9C2060B61B006E6FCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		757A1C9F2060B61B006E6FCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		757A1CA12060B61B006E6FCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		758AF566208FD3B9005F3697 /* GradientImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientImageView.swift; sourceTree = "<group>"; };
 		7590759B208ECE6900605022 /* BreedHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BreedHeaderView.xib; sourceTree = "<group>"; };
 		7590759D208ED24900605022 /* BreedHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedHeaderView.swift; sourceTree = "<group>"; };
 		7590759F208ED34800605022 /* BaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCell.swift; sourceTree = "<group>"; };
 		75A1E9AA208BCF9F009285F4 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		75A48C54208FF3C20090A472 /* BreedDetailViewController+descriptionAttributedText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BreedDetailViewController+descriptionAttributedText.swift"; sourceTree = "<group>"; };
 		75F11942208EFA190053C9DC /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
 		75F11946208F217F0053C9DC /* PetFinderDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetFinderDecoder.swift; sourceTree = "<group>"; };
 		75F11948208F3E690053C9DC /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		B3AD99C16870358BE6BB165E /* Pods-Doge Breeds.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Doge Breeds.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Doge Breeds/Pods-Doge Breeds.debug.xcconfig"; sourceTree = "<group>"; };
+		DCA015F68F126EAAC1E40517 /* Pods_Doge_Breeds.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Doge_Breeds.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,17 +101,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9BDC1663A8B530C10ABB65E /* Pods_Doge_Breeds.framework in Frameworks */,
+				749ECE6A0B4243F492D7BB50 /* Pods_Doge_Breeds.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2AB9ADB47C2EC6BA4223F4DB /* Frameworks */ = {
+		64629B26FBB237611C899660 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				326457D6211FAEBA7981A6FF /* Pods_Doge_Breeds.framework */,
+				DCA015F68F126EAAC1E40517 /* Pods_Doge_Breeds.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -171,6 +175,7 @@
 		753A7375208C90360032B725 /* MatchScreen */ = {
 			isa = PBXGroup;
 			children = (
+				753A735A208C8ECC0032B725 /* SwipeableView */,
 				753A7377208C90AB0032B725 /* MatchViewController.swift */,
 				753A737B208C91BF0032B725 /* MatchCardView.xib */,
 				753A737D208C92BA0032B725 /* MatchCardView.swift */,
@@ -196,7 +201,7 @@
 				757A1C922060B61B006E6FCC /* Doge Breeds */,
 				757A1C912060B61B006E6FCC /* Products */,
 				98FD67C740C1A2288A867B66 /* Pods */,
-				2AB9ADB47C2EC6BA4223F4DB /* Frameworks */,
+				64629B26FBB237611C899660 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -212,7 +217,6 @@
 			isa = PBXGroup;
 			children = (
 				753A7375208C90360032B725 /* MatchScreen */,
-				753A735A208C8ECC0032B725 /* SwipeableView */,
 				75A1E9A9208BCF73009285F4 /* BreedCamera */,
 				75070D4520887CC4009C8C22 /* Utils */,
 				754C7650207DD90600FB1991 /* HomeScreen */,
@@ -233,6 +237,7 @@
 				75F11941208EF9FE0053C9DC /* Details */,
 				75F11940208EF4A10053C9DC /* Header */,
 				753A737F208CA1490032B725 /* BreedDetailViewController.swift */,
+				75A48C54208FF3C20090A472 /* BreedDetailViewController+descriptionAttributedText.swift */,
 				7590759F208ED34800605022 /* BaseCell.swift */,
 			);
 			path = BreedDetail;
@@ -251,6 +256,7 @@
 			children = (
 				7590759B208ECE6900605022 /* BreedHeaderView.xib */,
 				7590759D208ED24900605022 /* BreedHeaderView.swift */,
+				758AF566208FD3B9005F3697 /* GradientImageView.swift */,
 			);
 			path = Header;
 			sourceTree = "<group>";
@@ -410,12 +416,14 @@
 				759075A0208ED34800605022 /* BaseCell.swift in Sources */,
 				754C764F207DD34F00FB1991 /* HomeViewController.swift in Sources */,
 				75070D4720887CEA009C8C22 /* Colors.swift in Sources */,
+				758AF567208FD3B9005F3697 /* GradientImageView.swift in Sources */,
 				7537631D2075E786003AC3B9 /* DogFact.swift in Sources */,
 				75F11943208EFA190053C9DC /* DetailsView.swift in Sources */,
 				753A737E208C92BA0032B725 /* MatchCardView.swift in Sources */,
 				757A1C982060B61B006E6FCC /* SecondViewController.swift in Sources */,
 				753A736D208C8ECC0032B725 /* CGPoint+SwipeableAdditions.swift in Sources */,
 				752DBEBD208890FF0094859E /* DogBreed.swift in Sources */,
+				75A48C55208FF3C20090A472 /* BreedDetailViewController+descriptionAttributedText.swift in Sources */,
 				753A7370208C8ECC0032B725 /* NibView.swift in Sources */,
 				757A1C942060B61B006E6FCC /* AppDelegate.swift in Sources */,
 				753A736A208C8ECC0032B725 /* SwipeableCardViewContainer.swift in Sources */,

@@ -73,7 +73,7 @@ extension MatchViewController : SwipeableCardViewDataSource {
                 subtitle: "\(pets[index].age ?? "") · \(pets[index].breeds?.joined(separator: " & ") ?? "")",
                 location: "\(pets[index].contact?.city ?? ""), \(pets[index].contact?.state ?? "")",
                 color: Colors.getRandomColor(alpha: 1.0),
-                image: img ?? UIImage.appIcon,
+                image: img ?? UIImage(named: "dogie_circle"),
                 sex: pets[index].sex
             )
             cardView.viewModel = viewModel

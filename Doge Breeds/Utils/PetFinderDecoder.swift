@@ -99,12 +99,9 @@ class PetFinderDecoder {
                 }
                 let media = pet["media"]
                 if media != JSON.null {
-                    print("MEDIA")
                     p.media = Media(photos: [Photo]())
                     if let photos = media["photos", "photo"].array {
-                        print("PHOTOS")
                         for photo in photos {
-                            print("PHOTO")
                             p.media?.photos?.append(Photo(
                                 size: photo["@size"].string,
                                 url: photo["$t"].string,
