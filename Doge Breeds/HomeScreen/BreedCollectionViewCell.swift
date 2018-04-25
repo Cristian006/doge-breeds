@@ -26,7 +26,7 @@ class BreedCollectionViewCell: UICollectionViewCell {
             breedLabel.text = breed.name
             originLabel.text = breed.details?.origin
             infoLabel.text = breed.details?.history
-            backgroundOverlay.backgroundColor = Colors.getRandomColor()
+            backgroundOverlay.backgroundColor = breed.color ?? Colors.getRandomColor()
             let data = try? Data(contentsOf: URL(string: (breed.img!))!)
             if data != nil {
                 breedImage.image = UIImage(data: data!)!

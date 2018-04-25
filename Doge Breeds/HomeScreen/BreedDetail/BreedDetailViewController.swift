@@ -28,6 +28,8 @@ class BreedDetailViewController: UICollectionViewController, UICollectionViewDel
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // HERO STUFF
+        
         collectionView?.alwaysBounceVertical = true
         collectionView?.backgroundColor = UIColor.white
         
@@ -84,7 +86,8 @@ class BreedDetailViewController: UICollectionViewController, UICollectionViewDel
 
 extension BreedDetailViewController: BreedHeaderViewDelegate {
     func onBackButtonPressed(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
+        dismiss(animated: true, completion: nil)
+        // navigationController?.popViewController(animated: true)
     }
     
     func onBookmarkButtonPressed(_ sender: Any) {

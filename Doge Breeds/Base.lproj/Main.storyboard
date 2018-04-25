@@ -304,7 +304,7 @@
             </objects>
             <point key="canvasLocation" x="726" y="895"/>
         </scene>
-        <!--Find Me-->
+        <!--Adopt Me-->
         <scene sceneID="SXV-Lz-Vco">
             <objects>
                 <viewController id="x6w-fZ-Ngg" customClass="MatchViewController" customModule="Doge_Breeds" customModuleProvider="target" sceneMemberID="viewController">
@@ -314,29 +314,75 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jJI-3H-WJj" customClass="SwipeableCardViewContainer" customModule="Doge_Breeds" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="64" width="375" height="400"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="400" id="kbM-mk-4UO"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jRx-WA-A7M">
+                                <rect key="frame" x="0.0" y="472" width="375" height="146"/>
+                                <subviews>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RBo-3O-VhO">
+                                        <rect key="frame" x="72" y="33" width="80" height="80"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="iD8-TA-ToN"/>
+                                            <constraint firstAttribute="width" constant="80" id="mVz-oS-ltd"/>
+                                        </constraints>
+                                        <color key="tintColor" red="0.95686274510000002" green="0.26274509800000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" image="clear_white"/>
+                                        <connections>
+                                            <action selector="SwipeLeftButton:" destination="x6w-fZ-Ngg" eventType="touchUpInside" id="lJs-dL-Gcf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mq1-aG-reE">
+                                        <rect key="frame" x="223" y="33" width="80" height="80"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="6Bf-ss-xTb"/>
+                                            <constraint firstAttribute="height" constant="80" id="qbJ-1w-ams"/>
+                                        </constraints>
+                                        <color key="tintColor" red="0.29803921570000003" green="0.68627450980000004" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" image="heart"/>
+                                        <connections>
+                                            <action selector="SwipeRightButton:" destination="x6w-fZ-Ngg" eventType="touchUpInside" id="v9d-xV-aWm"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="mq1-aG-reE" firstAttribute="centerY" secondItem="jRx-WA-A7M" secondAttribute="centerY" id="4nV-pW-5BW"/>
+                                    <constraint firstItem="mq1-aG-reE" firstAttribute="leading" relation="lessThanOrEqual" secondItem="RBo-3O-VhO" secondAttribute="trailing" constant="100" id="4qU-JF-qOJ"/>
+                                    <constraint firstItem="RBo-3O-VhO" firstAttribute="centerY" secondItem="jRx-WA-A7M" secondAttribute="centerY" id="Ilz-ux-ybf"/>
+                                    <constraint firstItem="RBo-3O-VhO" firstAttribute="leading" secondItem="jRx-WA-A7M" secondAttribute="leading" priority="750" constant="72" id="VE6-TY-Kfd"/>
+                                    <constraint firstItem="mq1-aG-reE" firstAttribute="leading" relation="lessThanOrEqual" secondItem="RBo-3O-VhO" secondAttribute="trailing" constant="100" id="VVu-F2-Tva"/>
+                                    <constraint firstAttribute="trailing" secondItem="mq1-aG-reE" secondAttribute="trailing" priority="750" constant="72" id="meK-4E-h7l"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="jJI-3H-WJj" firstAttribute="top" secondItem="APB-eg-FWN" secondAttribute="top" id="Epc-vu-2mZ"/>
+                            <constraint firstItem="jRx-WA-A7M" firstAttribute="bottom" secondItem="APB-eg-FWN" secondAttribute="bottom" id="Lcb-lH-cnZ"/>
+                            <constraint firstItem="jRx-WA-A7M" firstAttribute="trailing" secondItem="APB-eg-FWN" secondAttribute="trailing" id="O00-lm-fc0"/>
                             <constraint firstItem="jJI-3H-WJj" firstAttribute="leading" secondItem="APB-eg-FWN" secondAttribute="leading" id="Qne-Nq-HRb"/>
+                            <constraint firstItem="jRx-WA-A7M" firstAttribute="top" secondItem="jJI-3H-WJj" secondAttribute="bottom" constant="8" id="cfk-MZ-wEL"/>
+                            <constraint firstItem="jRx-WA-A7M" firstAttribute="leading" secondItem="APB-eg-FWN" secondAttribute="leading" id="hDd-iI-k8V"/>
                             <constraint firstItem="jJI-3H-WJj" firstAttribute="centerX" secondItem="APB-eg-FWN" secondAttribute="centerX" id="lLa-AA-WcO"/>
                             <constraint firstItem="APB-eg-FWN" firstAttribute="trailing" secondItem="jJI-3H-WJj" secondAttribute="trailing" id="twV-3C-36z"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="APB-eg-FWN"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Find Me" id="2yf-gF-eOZ"/>
+                    <navigationItem key="navigationItem" title="Adopt Me" id="2yf-gF-eOZ">
+                        <barButtonItem key="rightBarButtonItem" image="list" style="plain" id="gZ5-aO-Dn5"/>
+                    </navigationItem>
                     <connections>
+                        <outlet property="leftButton" destination="RBo-3O-VhO" id="hLy-ob-eoS"/>
+                        <outlet property="rightButton" destination="mq1-aG-reE" id="cUn-CL-WkG"/>
                         <outlet property="swipeableCardView" destination="jJI-3H-WJj" id="oZF-Ja-TzD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KKU-bg-7TI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="726" y="1693"/>
+            <point key="canvasLocation" x="725.60000000000002" y="1692.5037481259371"/>
         </scene>
         <!--Bookmarks-->
         <scene sceneID="hY8-sF-TfC">
@@ -399,5 +445,6 @@
         <image name="corgi" width="275" height="183"/>
         <image name="heart" width="24" height="24"/>
         <image name="home" width="24" height="24"/>
+        <image name="list" width="24" height="24"/>
     </resources>
 </document>

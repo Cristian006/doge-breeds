@@ -7,4 +7,6 @@ target 'Doge Breeds' do
   pod 'pop', '1.0.10'
   pod 'SwiftyJSON', '~> 4.0'
   pod 'Alamofire', '~> 4.7'
+  pod 'ChameleonFramework/Swift'
+  pod 'Hero'
 end

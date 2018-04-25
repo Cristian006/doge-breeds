@@ -6,7 +6,8 @@
 //  Copyright © 2018 Cristian Ponce. All rights reserved.
 //
 import UIKit
-import  SwiftyJSON
+import SwiftyJSON
+import ChameleonFramework
 
 struct factsStructure {
     var height: String?
@@ -38,14 +39,16 @@ class DogBreed
     var img: String?
     var facts: factsStructure?
     var details: detailStructure?
+    var color: UIColor?
     
     typealias receiveDogBreed = (_ d: DogBreed) -> Void
     typealias receiveDogBreeds = (_ d: [DogBreed]) -> Void
     
-    init(name: String, link: String, img: String, facts: factsStructure, details: detailStructure) {
+    init(name: String, link: String, img: String, color: UIColor,facts: factsStructure, details: detailStructure) {
         self.name = name
         self.link = link
         self.img = img
+        self.color = color
         self.facts = facts
         self.details = details
     }
@@ -71,10 +74,13 @@ class DogBreed
                 
                 for (_, json):(String, JSON) in breeds! {
                     // Do something you want
+                    let c = RandomFlatColorWithShade(shade: .light).withAlphaComponent(CGFloat(0.6))
+                    
                     let breed = DogBreed(
                         name: (json["name"].string)!,
                         link: (json["link"].string)!,
                         img: (json["img"].string)!,
+                        color: c,
                         facts: factsStructure(
                             height: json["facts", "height"].string,
                             life: json["facts", "life"].string,

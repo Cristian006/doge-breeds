@@ -1,5 +1,6 @@
 import UIKit
 import SwiftyJSON
+import ChameleonFramework
 
 class DogFact
 {
@@ -82,11 +83,14 @@ class DogFact
             fetchFacts(callback: { (facts) in
                 for f in facts {
                     group.enter()
+                    let c = RandomFlatColorWithShade(shade: .light)
+                    c.withAlphaComponent(0.6)
+                    
                     fetchRandomImage(callback: { (image) in
                         dFacts.append(DogFact(
                             title: "Doggie Fact",
                             fact: f,
-                            color: Colors.getRandomColor(),
+                            color: c,
                             image: image
                         ))
                         group.leave()
@@ -117,10 +121,12 @@ class DogFact
                     group.enter()
                     fetchRandomImage(callback: { (image) in
                         DispatchQueue.main.async {
+                            let c = RandomFlatColorWithShade(shade: .light).withAlphaComponent(CGFloat(0.6))
+                            
                             singleCallback(DogFact(
                                 title: "Doggie Fact",
                                 fact: f,
-                                color: Colors.getRandomColor(),
+                                color: c,
                                 image: image
                             ))
                         }

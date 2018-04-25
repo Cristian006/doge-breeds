@@ -5,7 +5,7 @@
 //  Created by Cristian Ponce on 4/10/18.
 //  Copyright © 2018 Cristian Ponce. All rights reserved.
 //
-
+import Hero
 import UIKit
 
 class HomeViewController: UIViewController {
@@ -29,13 +29,22 @@ class HomeViewController: UIViewController {
         dogBreedCollectionView?.delegate = self
     }
     
-    func showBreedDetailFor(breed: DogBreed) {
+    func showBreedDetailFor(breed: DogBreed, heroId: String) {
         let layout = UICollectionViewFlowLayout()
         
         let breedDetailController = BreedDetailViewController(collectionViewLayout: layout)
         breedDetailController.breed = breed
-
-        navigationController?.pushViewController(breedDetailController, animated: true)
+        breedDetailController.hero.isEnabled = true
+        
+        breedDetailController.collectionView?.hero.id = heroId
+        
+        // let header = breedDetailController.collectionView?.supplementaryView(forElementKind: UICollectionElementKindSectionHeader, at: IndexPath(item: 0, section: 0)) as! BreedHeaderView
+        
+        breedDetailController.collectionView?.hero.modifiers = [.spring(stiffness: 250, damping: 30)]
+        
+        
+        present(breedDetailController, animated: true)
+        //navigationController?.pushViewController(breedDetailController, animated: true)
     }
     
     func receiveDogBreed(_ d: DogBreed) -> Void {
@@ -99,7 +108,11 @@ extension HomeViewController : UICollectionViewDataSource, UICollectionViewDeleg
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if(indexPath.section == 1) {
             if let dogBreed = self.dogBreeds?[indexPath.item] {
-                self.showBreedDetailFor(breed: dogBreed)
+                let heroId = "cell\(dogBreed.name ?? String(indexPath.item))"
+                let cell = collectionView.cellForItem(at: indexPath)?.contentView
+                cell?.hero.id = heroId
+                
+                self.showBreedDetailFor(breed: dogBreed, heroId: heroId)
             }
         }
     }
@@ -156,7 +169,7 @@ extension FactsParentCell : UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print(dogFacts.count)
+        // print(dogFacts.count)
         return dogFacts.count
     }
     

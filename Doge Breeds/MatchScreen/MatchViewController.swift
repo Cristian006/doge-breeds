@@ -11,7 +11,9 @@ import Alamofire
 import SwiftyJSON
 
 class MatchViewController: UIViewController {
-    
+
+    @IBOutlet private weak var rightButton: UIButton!
+    @IBOutlet private weak var leftButton: UIButton!
     @IBOutlet private weak var swipeableCardView: SwipeableCardViewContainer!
     
     @IBAction func SwipeRightButton(_ sender: Any) {
@@ -41,6 +43,27 @@ class MatchViewController: UIViewController {
         swipeableCardView.delegate = self
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        rightButton.imageEdgeInsets = UIEdgeInsetsMake(16, 16, 16, 16);
+        leftButton.imageEdgeInsets = UIEdgeInsetsMake(16, 16, 16, 16);
+
+        rightButton.layer.cornerRadius = 40
+        leftButton.layer.cornerRadius = 40
+        
+        
+        leftButton.layer.masksToBounds = false
+        leftButton.layer.shadowOffset = CGSize(width: 0, height: 10)
+        leftButton.layer.shadowRadius = 8.0
+        leftButton.layer.shadowColor = UIColor.black.cgColor
+        leftButton.layer.shadowOpacity = 0.15
+        
+        rightButton.layer.masksToBounds = false
+        rightButton.layer.shadowOffset = CGSize(width: 0, height: 10)
+        rightButton.layer.shadowRadius = 8.0
+        rightButton.layer.shadowColor = UIColor.black.cgColor
+        rightButton.layer.shadowOpacity = 0.15
+    }
 }
 
 // MARK: - SwipeableCardViewDataSource
