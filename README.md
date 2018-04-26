@@ -1,5 +1,7 @@
 # DOGE BREEDS
 
+![dogeicon](./screenshots/Dogie.png "Doge Breeds")
+
 > This project is apart of my individual final for my IOS class at Cogswell
 
 An IOS app for adopting dogs in your area :)
