@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,7 +17,38 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Doge Breeds" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="HV8-tD-GUT">
+                                <rect key="frame" x="52" y="80" width="271" height="45.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="38"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt; /&gt; with &lt;3 by CrispCrafts" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oMp-Hn-d56">
+                                <rect key="frame" x="52" y="625.5" width="271" height="21.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dogie" translatesAutoresizingMaskIntoConstraints="NO" id="8rY-NE-w63">
+                                <rect key="frame" x="100" y="100" width="175" height="467"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oMp-Hn-d56" secondAttribute="trailing" constant="52" id="FTN-dQ-39j"/>
+                            <constraint firstItem="8rY-NE-w63" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="100" id="I09-VG-fl6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HV8-tD-GUT" secondAttribute="trailing" constant="52" id="I3E-jJ-o5W"/>
+                            <constraint firstItem="8rY-NE-w63" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Mb9-EX-jKO"/>
+                            <constraint firstItem="HV8-tD-GUT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="52" id="NOa-Jn-dOL"/>
+                            <constraint firstItem="8rY-NE-w63" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" constant="100" id="S7g-3d-agq"/>
+                            <constraint firstAttribute="trailing" secondItem="8rY-NE-w63" secondAttribute="trailing" constant="100" id="a3X-A8-r5t"/>
+                            <constraint firstAttribute="bottom" secondItem="8rY-NE-w63" secondAttribute="bottom" constant="100" id="nuh-QJ-oqP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="oMp-Hn-d56" secondAttribute="bottom" constant="20" id="qag-TH-q8G"/>
+                            <constraint firstItem="8rY-NE-w63" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="rN8-o4-X6d"/>
+                            <constraint firstItem="oMp-Hn-d56" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="52" id="rdb-5D-c7j"/>
+                            <constraint firstItem="HV8-tD-GUT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="vnf-TP-eZ9"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -26,4 +57,7 @@
             <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="dogie" width="2133" height="2133"/>
+    </resources>
 </document>
