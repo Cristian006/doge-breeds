@@ -10,13 +10,13 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BreedHeaderView" customModule="Doge_Breeds" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MatchHeader" customModule="Doge_Breeds" customModuleProvider="target">
             <connections>
-                <outlet property="back" destination="ZtD-KI-6be" id="PPZ-re-6I0"/>
-                <outlet property="backgroundImage" destination="mIR-dM-58s" id="AHD-FG-3IH"/>
-                <outlet property="book" destination="61q-5S-lVn" id="PHX-Kk-PVY"/>
-                <outlet property="nameLabel" destination="XTN-R5-TZa" id="kEB-OC-Xvn"/>
-                <outlet property="subLabel" destination="zld-Ur-4kY" id="UWC-tQ-Un9"/>
+                <outlet property="back" destination="ZtD-KI-6be" id="aEl-Jl-gaV"/>
+                <outlet property="backgroundImage" destination="mIR-dM-58s" id="Nop-CB-d2O"/>
+                <outlet property="book" destination="61q-5S-lVn" id="Ugd-Kl-OwC"/>
+                <outlet property="nameLabel" destination="XTN-R5-TZa" id="9vo-QH-xbK"/>
+                <outlet property="subLabel" destination="zld-Ur-4kY" id="huj-rH-Ltz"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -24,7 +24,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="corgi" translatesAutoresizingMaskIntoConstraints="NO" id="mIR-dM-58s" customClass="GradientImageView" customModule="Doge_Breeds" customModuleProvider="target">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="corgi" translatesAutoresizingMaskIntoConstraints="NO" id="mIR-dM-58s">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </imageView>
@@ -36,7 +36,7 @@
                     </constraints>
                     <state key="normal" image="bookmark_border_white"/>
                     <connections>
-                        <action selector="bookmarkButton:" destination="-1" eventType="touchUpInside" id="8DN-ri-Wui"/>
+                        <action selector="bookmarkButton:" destination="-1" eventType="touchUpInside" id="aFP-h4-8CU"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZtD-KI-6be" userLabel="BackButton">
@@ -47,7 +47,7 @@
                     </constraints>
                     <state key="normal" image="chevron_left"/>
                     <connections>
-                        <action selector="backButton:" destination="-1" eventType="touchUpInside" id="dJ2-9j-2rg"/>
+                        <action selector="backButton:" destination="-1" eventType="touchUpInside" id="JmH-lG-DEU"/>
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Affenpinscher" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XTN-R5-TZa" userLabel="Name">
@@ -78,9 +78,9 @@
                 <constraint firstItem="zld-Ur-4kY" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="QpI-Nh-yoP"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="XTN-R5-TZa" secondAttribute="trailing" constant="16" id="Qyo-8O-hBE"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="zld-Ur-4kY" secondAttribute="trailing" constant="16" id="WkT-Fu-84s"/>
-                <constraint firstItem="mIR-dM-58s" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="cQh-Qt-lch"/>
+                <constraint firstItem="mIR-dM-58s" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="cQh-Qt-lch"/>
                 <constraint firstItem="mIR-dM-58s" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="gEs-S9-gu0"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="mIR-dM-58s" secondAttribute="bottom" id="k6b-Ag-48l"/>
+                <constraint firstAttribute="bottom" secondItem="mIR-dM-58s" secondAttribute="bottom" id="k6b-Ag-48l"/>
                 <constraint firstItem="zld-Ur-4kY" firstAttribute="top" secondItem="XTN-R5-TZa" secondAttribute="bottom" id="nac-gY-N24"/>
                 <constraint firstItem="ZtD-KI-6be" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="sB8-DB-duh"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="zld-Ur-4kY" secondAttribute="bottom" constant="16" id="sYk-Rw-EYl"/>

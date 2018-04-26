@@ -87,7 +87,6 @@ class BreedDetailViewController: UICollectionViewController, UICollectionViewDel
 extension BreedDetailViewController: BreedHeaderViewDelegate {
     func onBackButtonPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
-        // navigationController?.popViewController(animated: true)
     }
     
     func onBookmarkButtonPressed(_ sender: Any) {

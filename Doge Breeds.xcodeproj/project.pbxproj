@@ -34,7 +34,6 @@
 		754C764F207DD34F00FB1991 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C764E207DD34F00FB1991 /* HomeViewController.swift */; };
 		755C7BDC208996A30020AA64 /* BreedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755C7BDB208996A30020AA64 /* BreedCollectionViewCell.swift */; };
 		757A1C942060B61B006E6FCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757A1C932060B61B006E6FCC /* AppDelegate.swift */; };
-		757A1C982060B61B006E6FCC /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757A1C972060B61B006E6FCC /* SecondViewController.swift */; };
 		757A1C9B2060B61B006E6FCC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 757A1C992060B61B006E6FCC /* Main.storyboard */; };
 		757A1C9D2060B61B006E6FCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 757A1C9C2060B61B006E6FCC /* Assets.xcassets */; };
 		757A1CA02060B61B006E6FCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 757A1C9E2060B61B006E6FCC /* LaunchScreen.storyboard */; };
@@ -42,6 +41,9 @@
 		7590759C208ECE6900605022 /* BreedHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7590759B208ECE6900605022 /* BreedHeaderView.xib */; };
 		7590759E208ED24900605022 /* BreedHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7590759D208ED24900605022 /* BreedHeaderView.swift */; };
 		759075A0208ED34800605022 /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7590759F208ED34800605022 /* BaseCell.swift */; };
+		7597532420911AFC007498AD /* MatchDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7597532220911AFC007498AD /* MatchDetailsView.swift */; };
+		75975327209129A9007498AD /* MatchHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75975326209129A9007498AD /* MatchHeader.xib */; };
+		75975329209129C5007498AD /* MatchHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75975328209129C5007498AD /* MatchHeader.swift */; };
 		75A1E9AB208BCF9F009285F4 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A1E9AA208BCF9F009285F4 /* CameraViewController.swift */; };
 		75A48C55208FF3C20090A472 /* BreedDetailViewController+descriptionAttributedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A48C54208FF3C20090A472 /* BreedDetailViewController+descriptionAttributedText.swift */; };
 		75F11943208EFA190053C9DC /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F11942208EFA190053C9DC /* DetailsView.swift */; };
@@ -78,7 +80,6 @@
 		755C7BDB208996A30020AA64 /* BreedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedCollectionViewCell.swift; sourceTree = "<group>"; };
 		757A1C902060B61B006E6FCC /* Doge Breeds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Doge Breeds.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		757A1C932060B61B006E6FCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		757A1C972060B61B006E6FCC /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		757A1C9A2060B61B006E6FCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		757A1C9C2060B61B006E6FCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		757A1C9F2060B61B006E6FCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -87,6 +88,9 @@
 		7590759B208ECE6900605022 /* BreedHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BreedHeaderView.xib; sourceTree = "<group>"; };
 		7590759D208ED24900605022 /* BreedHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedHeaderView.swift; sourceTree = "<group>"; };
 		7590759F208ED34800605022 /* BaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCell.swift; sourceTree = "<group>"; };
+		7597532220911AFC007498AD /* MatchDetailsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchDetailsView.swift; sourceTree = "<group>"; };
+		75975326209129A9007498AD /* MatchHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MatchHeader.xib; path = "Doge Breeds/MatchScreen/MatchDetails/MatchHeader.xib"; sourceTree = SOURCE_ROOT; };
+		75975328209129C5007498AD /* MatchHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchHeader.swift; sourceTree = "<group>"; };
 		75A1E9AA208BCF9F009285F4 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		75A48C54208FF3C20090A472 /* BreedDetailViewController+descriptionAttributedText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BreedDetailViewController+descriptionAttributedText.swift"; sourceTree = "<group>"; };
 		75F11942208EFA190053C9DC /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
@@ -176,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				753A735A208C8ECC0032B725 /* SwipeableView */,
+				7597532120911AFC007498AD /* MatchDetails */,
 				753A7377208C90AB0032B725 /* MatchViewController.swift */,
 				753A737B208C91BF0032B725 /* MatchCardView.xib */,
 				753A737D208C92BA0032B725 /* MatchCardView.swift */,
@@ -222,7 +227,6 @@
 				754C7650207DD90600FB1991 /* HomeScreen */,
 				7537631B2075E751003AC3B9 /* Models */,
 				757A1C932060B61B006E6FCC /* AppDelegate.swift */,
-				757A1C972060B61B006E6FCC /* SecondViewController.swift */,
 				757A1C992060B61B006E6FCC /* Main.storyboard */,
 				757A1C9C2060B61B006E6FCC /* Assets.xcassets */,
 				757A1C9E2060B61B006E6FCC /* LaunchScreen.storyboard */,
@@ -241,6 +245,16 @@
 				7590759F208ED34800605022 /* BaseCell.swift */,
 			);
 			path = BreedDetail;
+			sourceTree = "<group>";
+		};
+		7597532120911AFC007498AD /* MatchDetails */ = {
+			isa = PBXGroup;
+			children = (
+				7597532220911AFC007498AD /* MatchDetailsView.swift */,
+				75975326209129A9007498AD /* MatchHeader.xib */,
+				75975328209129C5007498AD /* MatchHeader.swift */,
+			);
+			path = MatchDetails;
 			sourceTree = "<group>";
 		};
 		75A1E9A9208BCF73009285F4 /* BreedCamera */ = {
@@ -343,6 +357,7 @@
 				7590759C208ECE6900605022 /* BreedHeaderView.xib in Resources */,
 				75070D49208882D3009C8C22 /* Breeds.json in Resources */,
 				753A737C208C91BF0032B725 /* MatchCardView.xib in Resources */,
+				75975327209129A9007498AD /* MatchHeader.xib in Resources */,
 				757A1CA02060B61B006E6FCC /* LaunchScreen.storyboard in Resources */,
 				757A1C9D2060B61B006E6FCC /* Assets.xcassets in Resources */,
 				757A1C9B2060B61B006E6FCC /* Main.storyboard in Resources */,
@@ -412,6 +427,7 @@
 				753A7369208C8ECC0032B725 /* SwipeableCardViewDelegate.swift in Sources */,
 				753A7374208C8ECC0032B725 /* SwipeableCardViewDataSource.swift in Sources */,
 				753A7372208C8ECC0032B725 /* SwipeableCardViewCard.swift in Sources */,
+				75975329209129C5007498AD /* MatchHeader.swift in Sources */,
 				7590759E208ED24900605022 /* BreedHeaderView.swift in Sources */,
 				753A736C208C8ECC0032B725 /* UIView+Constraints.swift in Sources */,
 				75A1E9AB208BCF9F009285F4 /* CameraViewController.swift in Sources */,
@@ -424,10 +440,10 @@
 				7537631D2075E786003AC3B9 /* DogFact.swift in Sources */,
 				75F11943208EFA190053C9DC /* DetailsView.swift in Sources */,
 				753A737E208C92BA0032B725 /* MatchCardView.swift in Sources */,
-				757A1C982060B61B006E6FCC /* SecondViewController.swift in Sources */,
 				753A736D208C8ECC0032B725 /* CGPoint+SwipeableAdditions.swift in Sources */,
 				752DBEBD208890FF0094859E /* DogBreed.swift in Sources */,
 				75A48C55208FF3C20090A472 /* BreedDetailViewController+descriptionAttributedText.swift in Sources */,
+				7597532420911AFC007498AD /* MatchDetailsView.swift in Sources */,
 				753A7370208C8ECC0032B725 /* NibView.swift in Sources */,
 				757A1C942060B61B006E6FCC /* AppDelegate.swift in Sources */,
 				753A736A208C8ECC0032B725 /* SwipeableCardViewContainer.swift in Sources */,

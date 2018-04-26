@@ -60,16 +60,16 @@
             </objects>
             <point key="canvasLocation" x="-2593" y="2128"/>
         </scene>
-        <!--Doggies-->
+        <!--Breeds-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
                 <viewController id="9pv-A4-QxB" customClass="HomeViewController" customModule="Doge_Breeds" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="J8x-SI-xH9" userLabel="Dog Breed Collection View">
-                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="502"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="N5s-9K-nAB">
                                     <size key="itemSize" width="100" height="300"/>
@@ -255,7 +255,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="U8f-OF-4q0"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Doggies" leftItemsSupplementBackButton="YES" id="7Ai-gw-HK0">
+                    <navigationItem key="navigationItem" title="Breeds" leftItemsSupplementBackButton="YES" id="7Ai-gw-HK0">
                         <barButtonItem key="leftBarButtonItem" title="Camera" image="camera" id="OBc-e3-DFn">
                             <connections>
                                 <action selector="onCameraClick:" destination="9pv-A4-QxB" id="B22-8q-mun"/>
@@ -289,11 +289,11 @@
         <scene sceneID="cYI-gh-5YR">
             <objects>
                 <navigationController id="XHj-ZL-iSd" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="heart" id="1Rt-Ix-kaV">
+                    <tabBarItem key="tabBarItem" title="" image="home_heart" id="1Rt-Ix-kaV">
                         <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
                     </tabBarItem>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4hd-q7-jz5">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" largeTitles="YES" id="4hd-q7-jz5">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -302,27 +302,36 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ykx-im-zsN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="726" y="895"/>
+            <point key="canvasLocation" x="258" y="970"/>
         </scene>
-        <!--Adopt Me-->
+        <!--Dogies-->
         <scene sceneID="SXV-Lz-Vco">
             <objects>
                 <viewController id="x6w-fZ-Ngg" customClass="MatchViewController" customModule="Doge_Breeds" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7uN-pq-AFl">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No more dogies" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zxf-kq-Qwq">
+                                <rect key="frame" x="16" y="190" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="e2v-TC-6YF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jJI-3H-WJj" customClass="SwipeableCardViewContainer" customModule="Doge_Breeds" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="64" width="375" height="400"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="400" id="kbM-mk-4UO"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jRx-WA-A7M">
-                                <rect key="frame" x="0.0" y="472" width="375" height="146"/>
+                                <rect key="frame" x="0.0" y="408" width="375" height="94"/>
                                 <subviews>
                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RBo-3O-VhO">
-                                        <rect key="frame" x="72" y="33" width="80" height="80"/>
+                                        <rect key="frame" x="72" y="7" width="80" height="80"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="iD8-TA-ToN"/>
@@ -335,7 +344,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mq1-aG-reE">
-                                        <rect key="frame" x="223" y="33" width="80" height="80"/>
+                                        <rect key="frame" x="223" y="7" width="80" height="80"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="6Bf-ss-xTb"/>
@@ -364,32 +373,67 @@
                             <constraint firstItem="jRx-WA-A7M" firstAttribute="bottom" secondItem="APB-eg-FWN" secondAttribute="bottom" id="Lcb-lH-cnZ"/>
                             <constraint firstItem="jRx-WA-A7M" firstAttribute="trailing" secondItem="APB-eg-FWN" secondAttribute="trailing" id="O00-lm-fc0"/>
                             <constraint firstItem="jJI-3H-WJj" firstAttribute="leading" secondItem="APB-eg-FWN" secondAttribute="leading" id="Qne-Nq-HRb"/>
+                            <constraint firstItem="zxf-kq-Qwq" firstAttribute="top" secondItem="APB-eg-FWN" secondAttribute="top" constant="190" id="RaI-VG-UVb"/>
                             <constraint firstItem="jRx-WA-A7M" firstAttribute="top" secondItem="jJI-3H-WJj" secondAttribute="bottom" constant="8" id="cfk-MZ-wEL"/>
+                            <constraint firstItem="APB-eg-FWN" firstAttribute="trailing" secondItem="zxf-kq-Qwq" secondAttribute="trailing" constant="16" id="cub-KJ-JHm"/>
                             <constraint firstItem="jRx-WA-A7M" firstAttribute="leading" secondItem="APB-eg-FWN" secondAttribute="leading" id="hDd-iI-k8V"/>
                             <constraint firstItem="jJI-3H-WJj" firstAttribute="centerX" secondItem="APB-eg-FWN" secondAttribute="centerX" id="lLa-AA-WcO"/>
                             <constraint firstItem="APB-eg-FWN" firstAttribute="trailing" secondItem="jJI-3H-WJj" secondAttribute="trailing" id="twV-3C-36z"/>
+                            <constraint firstItem="zxf-kq-Qwq" firstAttribute="leading" secondItem="APB-eg-FWN" secondAttribute="leading" constant="16" id="zPX-zs-Jvn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="APB-eg-FWN"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Adopt Me" id="2yf-gF-eOZ">
+                    <navigationItem key="navigationItem" title="Dogies" id="2yf-gF-eOZ">
                         <barButtonItem key="rightBarButtonItem" image="list" style="plain" id="gZ5-aO-Dn5"/>
                     </navigationItem>
                     <connections>
                         <outlet property="leftButton" destination="RBo-3O-VhO" id="hLy-ob-eoS"/>
                         <outlet property="rightButton" destination="mq1-aG-reE" id="cUn-CL-WkG"/>
                         <outlet property="swipeableCardView" destination="jJI-3H-WJj" id="oZF-Ja-TzD"/>
+                        <segue destination="Gs4-MF-YhX" kind="show" identifier="detail" id="tGM-ZS-C4N"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KKU-bg-7TI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="725.60000000000002" y="1692.5037481259371"/>
         </scene>
+        <!--Detail-->
+        <scene sceneID="UbP-gg-hD9">
+            <objects>
+                <viewController title="Detail" id="Gs4-MF-YhX" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="q5o-RS-xNQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SEr-Ny-zPZ" customClass="MatchHeader" customModule="Doge_Breeds" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="Kzy-76-hzx"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="SEr-Ny-zPZ" firstAttribute="trailing" secondItem="6x8-4T-fpY" secondAttribute="trailing" id="CUq-bh-cw5"/>
+                            <constraint firstItem="SEr-Ny-zPZ" firstAttribute="top" secondItem="q5o-RS-xNQ" secondAttribute="top" id="qLT-sx-02d"/>
+                            <constraint firstItem="SEr-Ny-zPZ" firstAttribute="leading" secondItem="6x8-4T-fpY" secondAttribute="leading" id="tIE-eY-3xn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6x8-4T-fpY"/>
+                    </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r4N-9A-XjS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1845.5999999999999" y="1692.5037481259371"/>
+        </scene>
         <!--Bookmarks-->
         <scene sceneID="hY8-sF-TfC">
             <objects>
                 <viewController title="Bookmarks" id="8fd-E4-gZ1" customClass="BookmarksViewController" customModule="Doge_Breeds" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Hjy-7Z-1rQ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="DQP-VL-Y1v"/>
@@ -403,12 +447,12 @@
         <scene sceneID="mi1-pS-3Mo">
             <objects>
                 <navigationController id="X4D-Hc-Dxv" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="home" id="3UQ-SO-JJM">
+                    <tabBarItem key="tabBarItem" title="" image="paw" id="3UQ-SO-JJM">
                         <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
                     </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MmQ-fP-U3Z">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" largeTitles="YES" id="MmQ-fP-U3Z">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -429,8 +473,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="X4D-Hc-Dxv" kind="relationship" relationship="viewControllers" id="5Pd-86-0mY"/>
                         <segue destination="XHj-ZL-iSd" kind="relationship" relationship="viewControllers" id="2QD-Do-78d"/>
+                        <segue destination="X4D-Hc-Dxv" kind="relationship" relationship="viewControllers" id="5Pd-86-0mY"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -444,7 +488,8 @@
         <image name="clear_white" width="24" height="24"/>
         <image name="corgi" width="275" height="183"/>
         <image name="heart" width="24" height="24"/>
-        <image name="home" width="24" height="24"/>
+        <image name="home_heart" width="27" height="27"/>
         <image name="list" width="24" height="24"/>
+        <image name="paw" width="24" height="24"/>
     </resources>
 </document>

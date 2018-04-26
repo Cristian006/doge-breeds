@@ -167,6 +167,7 @@ class SwipeableView: UIView {
     private func resetCardViewPosition() {
         removeAnimations()
 
+        
         // Reset Translation
         let resetPositionAnimation = POPSpringAnimation(propertyNamed: kPOPLayerTranslationXY)
         resetPositionAnimation?.fromValue = NSValue(cgPoint:POPLayerGetTranslationXY(layer))

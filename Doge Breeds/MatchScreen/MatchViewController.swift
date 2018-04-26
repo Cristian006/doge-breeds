@@ -64,6 +64,23 @@ class MatchViewController: UIViewController {
         rightButton.layer.shadowColor = UIColor.black.cgColor
         rightButton.layer.shadowOpacity = 0.15
     }
+    
+    func showMatchCardDetail(pet: Pet, heroId: String) {
+        let matchDetailController = MatchDetailsView()
+        matchDetailController.pet = pet
+        
+        matchDetailController.hero.isEnabled = true
+        
+        matchDetailController.matchHeaderView.hero.id = "card\(heroId)"
+        matchDetailController.matchHeaderView.backgroundImage.hero.id = "card_image\(heroId)"
+        matchDetailController.matchHeaderView.nameLabel.hero.id = "card_title\(heroId)"
+        matchDetailController.matchHeaderView.subLabel.hero.id = "card_sub\(heroId)"
+        matchDetailController.view.hero.modifiers = [.spring(stiffness: 250, damping: 30)]
+        //matchDetailController.matchHeaderView.backgroundImage.hero.modifiers = [.fade]
+        matchDetailController.matchHeaderView.nameLabel.hero.modifiers = [.spring(stiffness: 250, damping: 30)]
+        matchDetailController.matchHeaderView.subLabel.hero.modifiers = [.spring(stiffness: 250, damping: 30)]
+        present(matchDetailController, animated: true)
+    }
 }
 
 // MARK: - SwipeableCardViewDataSource
@@ -80,26 +97,11 @@ extension MatchViewController : SwipeableCardViewDataSource {
     func card(forItemAtIndex index: Int) -> SwipeableCardViewCard {
         let cardView = MatchCardView()
         if let pets = finder?.pets {
-            var img: UIImage? = nil
-            if pets[index].media?.photos != nil,
-                (pets[index].media?.photos?.count)! > 0,
-                let url = pets[index].media?.photos!.filter({ (Photo) -> Bool in
-                    return Photo.size == "x"
-                })[0].url {
-                if let data = try? Data(contentsOf: URL(string: url)!) {
-                    img = UIImage(data: data)
-                }
-            }
-            // (pets[index].contact?.city!)!
-            let viewModel = MatchCardViewModel(
-                title: pets[index].name!,
-                subtitle: "\(pets[index].age ?? "") · \(pets[index].breeds?.joined(separator: " & ") ?? "")",
-                location: "\(pets[index].contact?.city ?? ""), \(pets[index].contact?.state ?? "")",
-                color: Colors.getRandomColor(alpha: 1.0),
-                image: img ?? UIImage(named: "dogie_circle"),
-                sex: pets[index].sex
-            )
-            cardView.viewModel = viewModel
+            cardView.hero.id = "card\(pets[index].name ?? String(index))"
+            cardView.imageView.hero.id = "card_image\(pets[index].name ?? String(index))"
+            cardView.titleLabel.hero.id = "card_title\(pets[index].name ?? String(index))"
+            cardView.subtitleLabel.hero.id = "card_sub\(pets[index].name ?? String(index))"
+            cardView.pet = pets[index]
         }
         return cardView
     }
@@ -117,6 +119,9 @@ extension MatchViewController : SwipeableCardViewDelegate {
     
     func didSelect(card: SwipeableCardViewCard, atIndex index: Int) {
         print("Selected Card \(index)")
+        if let pets = finder?.pets {
+            showMatchCardDetail(pet: pets[index], heroId: "\(pets[index].name ?? String(index))")
+        }
     }
     
 }

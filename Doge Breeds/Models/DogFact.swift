@@ -124,7 +124,7 @@ class DogFact
                             let c = RandomFlatColorWithShade(shade: .light).withAlphaComponent(CGFloat(0.6))
                             
                             singleCallback(DogFact(
-                                title: "Doggie Fact",
+                                title: "Doge Fact",
                                 fact: f,
                                 color: c,
                                 image: image

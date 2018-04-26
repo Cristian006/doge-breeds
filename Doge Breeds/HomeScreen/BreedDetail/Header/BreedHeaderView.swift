@@ -17,6 +17,9 @@ class BreedHeaderView: BaseCell {
 
     var delegate: BreedHeaderViewDelegate?
     
+    @IBOutlet weak var back: UIButton!
+    @IBOutlet weak var book: UIButton!
+    
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var subLabel: UILabel!
     @IBOutlet weak var backgroundImage: UIImageView!
@@ -41,6 +44,9 @@ class BreedHeaderView: BaseCell {
     
     override func setupViews() {
         super.setupViews()
+        book.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        back.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        back.imageView?.contentMode = .scaleAspectFit
     }
 }
 

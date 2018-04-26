@@ -34,9 +34,6 @@
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="corgi" translatesAutoresizingMaskIntoConstraints="NO" id="n1H-9c-dJi">
                                     <rect key="frame" x="0.0" y="0.0" width="295" height="260"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="260" id="CVM-cO-mJf"/>
-                                    </constraints>
                                 </imageView>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gender-male" translatesAutoresizingMaskIntoConstraints="NO" id="ywP-av-qx4">
                                     <rect key="frame" x="247" y="212" width="32" height="32"/>
@@ -46,14 +43,17 @@
                                     </constraints>
                                 </imageView>
                             </subviews>
-                            <color key="backgroundColor" red="0.3646969199180603" green="0.75118285417556763" blue="0.96476590633392334" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <constraints>
                                 <constraint firstItem="n1H-9c-dJi" firstAttribute="leading" secondItem="KzP-I3-pDi" secondAttribute="leading" id="8Ov-wi-frN"/>
+                                <constraint firstAttribute="bottom" secondItem="n1H-9c-dJi" secondAttribute="bottom" id="AAg-XF-gbY"/>
                                 <constraint firstItem="n1H-9c-dJi" firstAttribute="centerX" secondItem="KzP-I3-pDi" secondAttribute="centerX" id="Hgu-nb-BQm"/>
                                 <constraint firstItem="n1H-9c-dJi" firstAttribute="centerY" secondItem="KzP-I3-pDi" secondAttribute="centerY" id="MSn-Ry-zBs"/>
                                 <constraint firstAttribute="bottom" secondItem="ywP-av-qx4" secondAttribute="bottom" constant="16" id="MkX-lC-QAz"/>
                                 <constraint firstAttribute="trailing" secondItem="ywP-av-qx4" secondAttribute="trailing" constant="16" id="QlD-yj-10x"/>
+                                <constraint firstItem="n1H-9c-dJi" firstAttribute="leading" secondItem="KzP-I3-pDi" secondAttribute="leading" id="YiO-0c-n90"/>
+                                <constraint firstAttribute="trailing" secondItem="n1H-9c-dJi" secondAttribute="trailing" id="bJP-ug-p9i"/>
                                 <constraint firstAttribute="trailing" secondItem="n1H-9c-dJi" secondAttribute="trailing" id="gac-I2-ckk"/>
+                                <constraint firstItem="n1H-9c-dJi" firstAttribute="top" secondItem="KzP-I3-pDi" secondAttribute="top" id="wM9-ZL-Slt"/>
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="trc-we-5GV">

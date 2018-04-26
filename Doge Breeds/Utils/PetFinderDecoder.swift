@@ -5,9 +5,10 @@
 //  Created by Cristian Ponce on 4/24/18.
 //  Copyright © 2018 Cristian Ponce. All rights reserved.
 //
-
+import UIKit
 import Foundation
 import SwiftyJSON
+import ChameleonFramework
 
 struct ContactInfo {
     var phone: String?
@@ -46,11 +47,54 @@ struct Pet {
     var shelterID: String?
     var lastUpdate: String?
     var animal: String?
+    var color: UIColor?
 }
 
 struct PetFinder {
     var lastOffset: Int?
     var pets: [Pet]?
+}
+
+extension Pet {
+    func getImg() -> UIImage {
+        var img: UIImage? = nil
+        if self.media?.photos != nil,
+            (self.media?.photos?.count)! > 0,
+            let url = self.media?.photos!.filter({ (Photo) -> Bool in
+                return Photo.size == "x"
+            })[0].url {
+            if let data = try? Data(contentsOf: URL(string: url)!) {
+                img = UIImage(data: data)
+            }
+        }
+        return img ?? UIImage(named: "dogie_circle")!
+    }
+    
+    func getGenderIcon() -> UIImage {
+        return UIImage(named: (self.sex == "M" ? "gender-male" : "gender-female"))!
+    }
+    
+    func getLocationLabel() -> String {
+        var locationStr = ""
+        if let city = self.contact?.city {
+            locationStr += "\(city), "
+        }
+        if let state = self.contact?.state {
+            locationStr += state
+        }
+        return locationStr
+    }
+    
+    func getSubLabel() -> String {
+        var sub = ""
+        if let age = self.age {
+            sub += "\(age) · "
+        }
+        if let breeds = self.breeds {
+            sub += breeds.joined(separator: " & ")
+        }
+        return sub
+    }
 }
 
 class PetFinderDecoder {
@@ -159,6 +203,7 @@ class PetFinderDecoder {
                 if let animal = pet["animal", "$t"].string {
                     p.animal = animal
                 }
+                p.color = RandomFlatColorWithShade(shade: .light)
                 finder.pets?.append(p)
             }
         }

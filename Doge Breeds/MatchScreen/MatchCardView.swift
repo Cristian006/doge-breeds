@@ -11,14 +11,14 @@ import CoreMotion
 
 class MatchCardView: SwipeableCardViewCard {
     
-    @IBOutlet private weak var titleLabel: UILabel!
-    @IBOutlet private weak var subtitleLabel: UILabel!
-    @IBOutlet private weak var locationLabel: UILabel!
-    @IBOutlet private weak var sexImage: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var subtitleLabel: UILabel!
+    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var sexImage: UIImageView!
     
-    @IBOutlet private weak var imageBackgroundColorView: UIView!
-    @IBOutlet private weak var imageView: UIImageView!
-    @IBOutlet private weak var backgroundContainerView: UIView!
+    @IBOutlet weak var imageBackgroundColorView: UIView!
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var backgroundContainerView: UIView!
     
     /// Core Motion Manager
     private let motionManager = CMMotionManager()
@@ -29,20 +29,20 @@ class MatchCardView: SwipeableCardViewCard {
     /// Inner Margin
     private static let kInnerMargin: CGFloat = 20.0
     
-    var viewModel: MatchCardViewModel? {
+    var pet: Pet? {
         didSet {
-            configure(forViewModel: viewModel)
+            configure(pet: pet)
         }
     }
-    
-    private func configure(forViewModel viewModel: MatchCardViewModel?) {
-        if let viewModel = viewModel {
-            titleLabel.text = viewModel.title
-            subtitleLabel.text = viewModel.subtitle
-            imageBackgroundColorView.backgroundColor = viewModel.color
-            imageView.image = viewModel.image
-            locationLabel.text = viewModel.location
-            sexImage.image = UIImage(named: (viewModel.sex == "M" ? "gender-male" : "gender-female"))
+
+    private func configure(pet: Pet?) {
+        if let p = pet {
+            titleLabel.text = p.name
+            subtitleLabel.text = p.getSubLabel()
+            imageView.backgroundColor = pet?.color ?? Colors.getRandomColor()
+            imageView.image = p.getImg()
+            locationLabel.text = p.getLocationLabel()
+            sexImage.image = p.getGenderIcon()
             backgroundContainerView.layer.cornerRadius = 14.0
         }
     }
